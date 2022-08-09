@@ -1,8 +1,11 @@
 site_name: Infotiv Autonomous Platform
-site_url: https://infotiv-research.github.io/autoplatform/
+site_url: https://infotiv-research.github.io/gokart-documentation/
+
+repo_name: infotiv-research/gokart-documentation
+repo_url: https://github.com/infotiv-research/gokart-documentation
 
 theme:
-  name: 'readthedocs'
+  name: 'material'
   feature:
     - navigation.tabs
     - navigation.tracking
