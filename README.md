@@ -1,4 +1,11 @@
-# How to build the PDF document
+## How to build the website
+
+```
+mkdocs serve      -f web-mkdocs.yml
+mkdocs gh-deploy  -f web-mkdocs.yml
+```
+
+## How to build the PDF document
 
 ```
 git clone https://github.com/ebadi/mkdocs-with-pdf
@@ -15,6 +22,7 @@ cp pdf-mkdocs.yml mkdocs.yml
 docker-compose build
 docker-compose run debian build
 ```
+
 
 
 ```
@@ -61,11 +69,6 @@ INFO     -  Documentation built in 7.17 seconds
 ```
 - [Output PDF](infotiv-gokart.pdf)
 
-# How to build the website
-
-```
-mkdocs serve  -f site-mkdocs.yml
-```
 
 
 

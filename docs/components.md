@@ -19,7 +19,7 @@ GoKart
 
 
 * Ninebot S
-* Ninebot Go-Kart: [Manual](assets/images/ninebot-gokart/User_Manual_Gokart_Kit_Updated.pdf),  [Manufacturer](https://store.segway.com/segway-ninebot-gokart-kit)
+* Ninebot Go-Kart:  [Manufacturer](https://store.segway.com/segway-ninebot-gokart-kit)
 
 ![ Infotiv Autonomous Platform!](assets/images/ninebot-gokart/ninebot-gokart.jpg " Infotiv Autonomous Platform")
 
