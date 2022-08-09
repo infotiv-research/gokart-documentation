@@ -1,0 +1,35 @@
+site_name: Infotiv Autonomous Platform
+site_url: https://infotiv-research.github.io/autoplatform/
+
+theme:
+  name: 'readthedocs'
+  feature:
+    - navigation.tabs
+    - navigation.tracking
+site_author: INFOTIV # Hamid Ebadi
+nav:
+    - Home: index.md
+    - Scope and Goal: scope.md
+    - Architecture:
+        - Automotive Platform: platform.md
+        - Body Electronics: bodyelec.md
+        - Autonomous Drive : autonomous.md
+    - Components:
+        - HW and Board Components: components.md
+        - Interfaces and Sensors: interfaces.md
+        - Software Repositories: software.md        
+    - Usage Manual:
+        - Start the GoKart: start.md
+        - Common Issues: issues-todo.md
+        - For Developers: dev.md
+    - About:
+        - Thesis Projects: projects.md
+        - Contact Infotiv: contact.md
+        - Glossary of Terms: terms.md
+        - ChangeLog: changelog.md
+
+markdown_extensions:
+    toc:
+        permalink: true
+    admonition: {}
+    
