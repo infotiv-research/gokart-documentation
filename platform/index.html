@@ -861,20 +861,20 @@
 
 
 <h1 id="automotive-platform-ecus">Automotive Platform ECUs<a class="headerlink" href="#automotive-platform-ecus" title="Permanent link">&para;</a></h1>
-<p>Automotive Platform consist of several ECUs and the purpose of these ECUs (CEM, ADAS, BMS, ECM/VCU, OBC, DC/DC, IHU, TEM) are best described in <code>/protectedDocuments/Infotiv Research and Education Go-kart Platform/Old Product &amp; Functional Description of IES Education platform.docx</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
+<p>The purpose of ECUs in the platform (CEM, ADAS, BMS, ECM/VCU, OBC, DC/DC, IHU, TEM) are best described in <code>/protectedDocuments/Infotiv Research and Education Go-kart Platform/Old Product &amp; Functional Description of IES Education platform.docx</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
 <p>System Overview:
 <img alt="System Overview!" src="../assets/images/system-overview.png" title="System Overview" /></p>
-<p>The platform includes three different CAN bus-systems:</p>
-<ul>
-<li>Propulsion CAN</li>
-<li>Safety CAN</li>
-<li>Infotainment CAN</li>
-</ul>
-<p>The communication between these three CAN buses shall all be routed through the CEM, which will act as gateway and general body electronics module.</p>
+<p>General purpose:
+Complete HW with basic function implementation to be able to integrate the previous car platforms (Ultrasonic platform, LIDAR platform and Vision Platform) into one combined platform.</p>
+<p>The platform includes three different CAN bus-systems:
+- Propulsion CAN
+- Safety CAN
+- Infotainment CAN</p>
+<p>The three CAN buses and communication between them shall all be routed through the CEM, which will act as gateway and general body electronics module.</p>
 <h2 id="ecu-function-level">ECU function level<a class="headerlink" href="#ecu-function-level" title="Permanent link">&para;</a></h2>
 <h3 id="cem">CEM<a class="headerlink" href="#cem" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Gateway functionality between the three buses</li>
+<li>Gateway functionality between the three buses defined in General purpose</li>
 </ul>
 <h3 id="adas">ADAS<a class="headerlink" href="#adas" title="Permanent link">&para;</a></h3>
 <ul>
@@ -889,7 +889,7 @@
 <li>Be able to communicate with CEM and ECM/VCU<ul>
 <li>SOC value </li>
 <li>Battery contactor status</li>
-<li>etc</li>
+<li>Etc</li>
 </ul>
 </li>
 </ul>

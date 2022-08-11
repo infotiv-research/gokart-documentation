@@ -382,7 +382,7 @@
       
         <li class="md-nav__item">
   <a href="#stm32f103c8t6-blue-pill-development-board" class="md-nav__link">
-    STM32F103C8T6 - "Blue Pill" Development Board
+    STM32F103C8T6 - ”Blue Pill” Development Board
   </a>
   
 </li>
@@ -673,7 +673,7 @@
       
         <li class="md-nav__item">
   <a href="#stm32f103c8t6-blue-pill-development-board" class="md-nav__link">
-    STM32F103C8T6 - "Blue Pill" Development Board
+    STM32F103C8T6 - ”Blue Pill” Development Board
   </a>
   
 </li>
@@ -745,14 +745,15 @@
 <li>Lidar (1)</li>
 <li>Ultrasonic (4)</li>
 <li>Camera (1)</li>
-<li>Stereo vision (1)</li>
+<li>(Stereo vision (1))</li>
 <li>HV – battery (1)</li>
 <li>LV – battery (1)</li>
 <li>Motors (4)</li>
 <li>Wheel speed sensors (4)</li>
 <li>OBD2 connector (1)</li>
 <li>Charging connector (1)</li>
-<li>GPS (no function)</li>
+<li>“GPS” (no function)
+GoKart</li>
 </ul>
 <p><img alt="Hardware block diagram!" src="../assets/images/hwblock.png" title="Hardware block diagram" /></p>
 <ul>
@@ -764,7 +765,8 @@
 <a href="https://www.fictiv.com/teardowns/segway-minipro-teardown">Segway miniPRO Teardown</a></p>
 <p>Communication between these parts are analysed in the <code>protectedDocuments/Gokart Serielanalys/Kommunikation för Gokart.docx</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
 <h2 id="nvidia-jetson-tx2-developer-kit">NVIDIA Jetson TX2 Developer Kit<a class="headerlink" href="#nvidia-jetson-tx2-developer-kit" title="Permanent link">&para;</a></h2>
-<p>A backup of the system image is in the internal sharepoint <strong>(<a href="../contact/">Protected document</a>)</strong>. You can connect an HDMI cable to the ECU or connect to it remotely. The username for the image is <code>gokart1</code> and the password is <strong>(<a href="../contact/">Protected document</a>)</strong>.</p>
+<p>Find a backup of the image in <code>TODO</code> <strong>(<a href="../contact/">Protected document</a>)</strong>.
+The username for the image is <code>gokart1</code> and the password is <strong>(<a href="../contact/">Protected document</a>)</strong>.</p>
 <pre><code class="language-bash">$ uname -an
 Linux dobby 4.9.140-tegra #1 SMP PREEMPT Tue Oct 27 21:02:46 PDT 2020 aarch64 aarch64 aarch64 GNU/Linux
 
@@ -786,7 +788,7 @@ gokart1   8781  0.5  0.6 361616 54632 pts/0    Sl+  12:47   0:03 /usr/bin/python
 gokart1   9503  0.0  0.0   7216   644 pts/2    S+   12:59   0:00 grep --color=auto ros
 
 </code></pre>
-<h2 id="stm32f103c8t6-blue-pill-development-board">STM32F103C8T6 - "Blue Pill" Development Board<a class="headerlink" href="#stm32f103c8t6-blue-pill-development-board" title="Permanent link">&para;</a></h2>
+<h2 id="stm32f103c8t6-blue-pill-development-board">STM32F103C8T6 - ”Blue Pill” Development Board<a class="headerlink" href="#stm32f103c8t6-blue-pill-development-board" title="Permanent link">&para;</a></h2>
 <p>The Blue Pill is a development board based on ST Microelectronics’ STM32F103C8T6 microcontroller that has an ARM Cortex-M3 core that runs at 72MHz max. Most of the ECUs on the Infotiv Autonomous Platform, including the CEM, ADAS_DK and VCU are based on STM32s, coded in C++ in Infotiv’s own embedded framework.</p>
 <p><img alt="STM32 Blue Pill !" src="../assets/images/boards/STM32F103C8T6_Blue_Pill-1.jpg" title="STM32 Blue Pill" /></p>
 <p>Check this document for start-up guide for autonomous platform and STM32 <code>2019 - Praktik, Elschema och BOM för bilplatform/Platform V1/Bilplattform_STM32.pdf</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
@@ -799,7 +801,7 @@ gokart1   9503  0.0  0.0   7216   644 pts/2    S+   12:59   0:00 grep --color=au
 <p>This sensor uses ultrasonic sound to measure distance to objects in it’s way. It’s working range is specified to between 20 to 4000 mm. It’s simple to set up but has a drawback in it’s quite narrow field of vision. To compensate for this we use six sensors on the Gokart.</p>
 <h2 id="emg49-gear-motor-with-encoder">EMG49 - Gear motor with encoder<a class="headerlink" href="#emg49-gear-motor-with-encoder" title="Permanent link">&para;</a></h2>
 <h2 id="3d-printed-parts">3D printed parts<a class="headerlink" href="#3d-printed-parts" title="Permanent link">&para;</a></h2>
-<p>The 3D model files can be found in <code>protectedDocuments/2020 - Infotiv Autonomous Platform, Body Electronics Intern work Package/Gokart 3D models</code> folder   <strong>(<a href="../contact/">Protected document</a>)</strong></p>
+<p>Find the 3D model files in <code>protectedDocuments/2020 - Infotiv Autonomous Platform, Body Electronics Intern work Package/Gokart 3D models</code> folder   <strong>(<a href="../contact/">Protected document</a>)</strong></p>
 <h2 id="battery-and-battery-monitoring-system">Battery and Battery Monitoring System<a class="headerlink" href="#battery-and-battery-monitoring-system" title="Permanent link">&para;</a></h2>
 <p>To power the Body Electronics circuit require a battery of type Lipo 5000mAh 5S 25C Lipo Pack w/XT90. A LM2596 buck converter is used to step down the voltage from the battery to 12V powering the circuit
 The ECUs are powered by another Lipo battery with another buck converter that steps down to 5V.</p>

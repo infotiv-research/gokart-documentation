@@ -638,56 +638,55 @@
 
 <h3 id="issue-list">Issue List<a class="headerlink" href="#issue-list" title="Permanent link">&para;</a></h3>
 <ul>
-<li>✅ Left &amp; Right wheels are not synced: Possible Solution: Using the backup GoKart may possibly solve this.</li>
-<li>✅ Not possible to turn the wheel to the Left: Found a working solution in the repository</li>
-<li>✅ CAN message cannot be used to control the wheel/speed: Replaying the CAN can move the steering wheel.</li>
+<li>[X] Left &amp; Right wheels are not synced: Possible Solution: Using the backup GoKart may possibly solve this.</li>
+<li>[X] Not possible to turn the wheel to the Left: Found a working solution in the repository</li>
+<li>[X] CAN message cannot be used to control the wheel/speed: Replaying the CAN can move the steering wheel.</li>
 <li>
-<p>❌ System beeping for no reason with Red flashing light</p>
+<p>[ ] System beeping for no reason with Red flashing light</p>
 <p>1- Possible Solution: Use remote control (or ROS) to do propulsion operation (steering &amp; speeed) and it changes the beeping patter and light color to orange</p>
 <p>2- Possible Solution: internal gyro notices that the device is tilted?</p>
 </li>
 <li>
-<p>❌ The NVIDIA Jetson TX2 Developer Kit comes with 19v &amp; 4.7A (90W max) power supply. However the external power &amp; possible the battries cannot provide enough power and causes the Jetson to shutdown when wheel/steerin are engaged. </p>
+<p>[ ] The NVIDIA Jetson TX2 Developer Kit comes with 19v &amp; 4.7A (90W max) power supply. However the external power &amp; possible the battries cannot provide enough power and causes the Jetson to shutdown when wheel/steerin are engaged. </p>
 </li>
-<li>✅ Kill switch: Fixed in the code.</li>
-<li>❌ Extra power supply &amp; battery </li>
-<li>❌ Segway supports external batteries (BMS need to be studied throughly)</li>
-<li>✅ OpenPilot POC</li>
+<li>[X] Kill switch: Fixed in the code.</li>
+<li>[ ] Extra power supply &amp; battery </li>
+<li>[ ] Segway supports external batteries (BMS need to be studied throughly)</li>
+<li>[X] OpenPilot POC</li>
 <li>
-<p>❌ OpenPilot </p>
+<p>[ ] OpenPilot </p>
 <p>1- Delay</p>
 </li>
 <li>
-<p>✅ Documentation</p>
+<p>[X] Documentation</p>
 <p>1- ✅ PDF</p>
 <p>2- ✅ Webpage</p>
 </li>
 <li>
-<p>❌ Thesis project to upgrade part, documentation, CI</p>
+<p>[ ] Thesis project to upgrade part, documentation, CI</p>
 </li>
-<li>❌ pull request recent changes on VCU</li>
-<li>❌ Disable and enable RC in VCU</li>
+<li>[ ] pull request recent changes on VCU</li>
+<li>[ ] Disable and enable RC in VCU</li>
 <li>
-<p>❌ Find other areas for testing (preferebly with electricity and road line)</p>
+<p>[ ] Find other areas for testing (preferebly with electricity and road line)</p>
 <p>1- AstaZero: Far away</p>
 <p>2- Other locations?</p>
 </li>
 <li>
-<p>❌ Open source the project. </p>
+<p>[ ] Open source the project. </p>
 <p>1- ✅ Document as an opensource project for VALU3S</p>
 <p>2- PCB boards &amp; codes</p>
 <p>3- 3D models</p>
 </li>
 <li>
-<p>❌ 3D print module for body electronics module</p>
+<p>[ ] 3D print module for body electronics module</p>
 </li>
-<li>✅  Kill switch or RC</li>
-<li>❌ Implement missing ROS APIs</li>
-<li>❌ reenable RC sttering, not sending neutral steering but just L&amp;R  (see throttle for inspiration)</li>
-<li>❌ Fix carla streering value range</li>
-<li>❌ Make a command to stop wheel before killing the openpilot docker process</li>
+<li>[X]  Kill switch or RC</li>
+<li>[ ] Implement missing ROS APIs</li>
+<li>[ ] reenable RC sttering, not sending neutral steering but just L&amp;R  (see throttle for inspiration)</li>
+<li>[ ] Fix carla streering value range</li>
+<li>[ ] Make a command to stop wheel before killing the openpilot docker process</li>
 </ul>
-<p>Patches for fixing the issue with remote control</p>
 <pre><code>void RcView::updateSpeedPulse() 
 {
     speedData_ = RC_SPEED_INPUT.get();
@@ -728,7 +727,7 @@
 }
 
 </code></pre>
-<p>The left steering is not implemented correctly or NOT at all</p>
+<p>Evidences that left steering is not implemented correctly or NOT at all</p>
 <ol>
 <li>gokart_controller / gokart_controller.py</li>
 </ol>
