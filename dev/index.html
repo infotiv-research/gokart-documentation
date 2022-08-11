@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="INFOTIV" /><link rel="canonical" href="https://infotiv-research.github.io/gokart-documentation/dev/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>For Developers - Infotiv Autonomous Platform</title>
+    <title>Dev - Infotiv Autonomous Platform</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "For Developers";
+        var mkdocs_page_name = "Dev";
         var mkdocs_page_input_path = "dev.md";
         var mkdocs_page_url = "/gokart-documentation/dev/";
       </script>
@@ -48,46 +48,6 @@
                 <li class="toctree-l1"><a class="reference internal" href="../scope/">Scope and Goal</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Architecture</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../platform/">Automotive Platform</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../bodyelec/">Body Electronics</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../autonomous/">Autonomous Drive</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Components</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../components/">HW and Board Components</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../interfaces/">Interfaces and Sensors</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../software/">Software Repositories</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Usage Manual</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../start/">Start the GoKart</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../issues-todo/">Common Issues</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">For Developers</a>
-    <ul class="current">
-    </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">About</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../projects/">Thesis Projects</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact Infotiv</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../terms/">Glossary of Terms</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../changelog/">ChangeLog</a>
-                  </li>
-              </ul>
       </div>
     </div>
     </nav>
@@ -101,8 +61,7 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Usage Manual &raquo;</li><li>For Developers</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Dev</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/infotiv-research/gokart-documentation/edit/master/docs/dev.md"> Edit on infotiv-research/gokart-documentation</a>
     </li>
@@ -113,7 +72,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h4 id="building-roscanbus">building RosCanBus<a class="headerlink" href="#building-roscanbus" title="Permanent link">&para;</a></h4>
+                <h4 id="building-roscanbus">building RosCanBus</h4>
 <pre><code>root of the ROSCANBUS project is /home/olle/SSD/ROS_projects/RosCanBus/src/roscanbus for building the project
 
 # To run the ruscanbus node:
@@ -122,7 +81,7 @@ kill -9 `pidof roscanbus_node` ; kill -9 `pidof roscore`  ; roscore &amp;
 kill -9 `pidof roscanbus_node` ; source /opt/ros/melodic/setup.sh; cd /home/olle/SSD/ROS_projects/RosCanBus; /home/olle/SSD/ROS_projects/RosCanBus/src/roscanbus/build/devel/lib/roscanbus/roscanbus_node
 
 </code></pre>
-<h4 id="services">Services<a class="headerlink" href="#services" title="Permanent link">&para;</a></h4>
+<h4 id="services">Services</h4>
 <p>To install services you need to use the <a href="https://gitlab.infotivlab.se/internal-development/autonomous-platform/gokart/gokart_setup">following repository</a>:</p>
 <p><code>/etc/systemd/system/</code></p>
 <pre><code class="language-txt">[Unit]
@@ -141,7 +100,7 @@ WantedBy=multi-user.target
 sudo systemctl start  roscanbus.service
 sudo systemctl status roscanbus.service
 </code></pre>
-<h4 id="gokart_controller-on-remote-client-machine">gokart_controller on remote client machine<a class="headerlink" href="#gokart_controller-on-remote-client-machine" title="Permanent link">&para;</a></h4>
+<h4 id="gokart_controller-on-remote-client-machine">gokart_controller on remote client machine</h4>
 <p><strong> Make sure roscanbus_node is running on GoKart </strong></p>
 <pre><code class="language-bash">sudo apt-get install -y ros-sensor-msgs 
 export ROS_MASTER_URI=http://dobby.local:11311
@@ -153,14 +112,14 @@ cd gokart_controller
 python3 test.py 
 
 </code></pre>
-<h4 id="local-git-setup">Local git setup<a class="headerlink" href="#local-git-setup" title="Permanent link">&para;</a></h4>
+<h4 id="local-git-setup">Local git setup</h4>
 <pre><code class="language-txt">Host gitlab.infotivlab.se
     Hostname 10.0.4.27
     IdentityFile ~/.ssh/id_rsa
     User git
 
 </code></pre>
-<h4 id="stm32-blue-pill-development-environment">STM32 Blue Pill Development environment<a class="headerlink" href="#stm32-blue-pill-development-environment" title="Permanent link">&para;</a></h4>
+<h4 id="stm32-blue-pill-development-environment">STM32 Blue Pill Development environment</h4>
 <pre><code>sudo apt-get install gcc-arm-none-eabi libnewlib-arm-none-eabi
 arm-none-eabi-newlib # arch 
 
@@ -224,8 +183,8 @@ First test
 
 
 </code></pre>
-<h4 id="st-link-dongle-to-the-blue-pill-connection">ST-LINK dongle to the Blue Pill connection<a class="headerlink" href="#st-link-dongle-to-the-blue-pill-connection" title="Permanent link">&para;</a></h4>
-<h4 id="flash-vcpu">Flash VCPU<a class="headerlink" href="#flash-vcpu" title="Permanent link">&para;</a></h4>
+<h4 id="st-link-dongle-to-the-blue-pill-connection">ST-LINK dongle to the Blue Pill connection</h4>
+<h4 id="flash-vcpu">Flash VCPU</h4>
 <p><img alt="ST-LINK dongle" src="../assets/images/bluepill.jpeg" title="ST-LINK dongle" /></p>
 <p>Create a file called openocd.cfg</p>
 <pre><code class="language-txt">source [find interface/stlink-v2.cfg]
@@ -302,20 +261,20 @@ verified 20656 bytes in 0.355877s (56.682 KiB/s)
 shutdown command invoked
 make[1]: Leaving directory '/home/hamid/repositories/GOKART/gokart_vcu'
 </code></pre>
-<h4 id="debug-messages">Debug messages<a class="headerlink" href="#debug-messages" title="Permanent link">&para;</a></h4>
+<h4 id="debug-messages">Debug messages</h4>
 <p>To see the debug messages that are shown in the serial port with <code>logger.error()</code> function:</p>
 <pre><code class="language-bash">sudo miniterm /dev/ttyUSB0 115200
 
 [33;1m[WARNING]␛[0m No message from CAN. Restarting MCP2515
 </code></pre>
-<h4 id="ssh-keys">SSH keys<a class="headerlink" href="#ssh-keys" title="Permanent link">&para;</a></h4>
+<h4 id="ssh-keys">SSH keys</h4>
 <p>There are already one ssh key added as an auithorized key to the gokart. copy the content of <code>/protectedDocuments/SSHKeys</code> <strong>(<a href="../contact/">Protected document</a>)</strong> to <code>~/.ssh/</code> directory. You will be able to connect to gokart without using password as below</p>
 <pre><code class="language-bash">ssh gokart1@dobby.local
 </code></pre>
 <p>As an example you can shutdown the jetson board  like this:</p>
 <pre><code class="language-bash">ssh gokart1@dobby.local &quot;shutdown -h now&quot;
 </code></pre>
-<h4 id="patches">Patches<a class="headerlink" href="#patches" title="Permanent link">&para;</a></h4>
+<h4 id="patches">Patches</h4>
 <p>Patches for fixing the issue with remote control</p>
 <pre><code>void RcView::updateSpeedPulse() 
 {
@@ -390,10 +349,6 @@ src/views/RcView.h
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../issues-todo/" class="btn btn-neutral float-left" title="Common Issues"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../projects/" class="btn btn-neutral float-right" title="Thesis Projects">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -415,10 +370,6 @@ src/views/RcView.h
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../issues-todo/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../projects/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="INFOTIV" /><link rel="canonical" href="https://infotiv-research.github.io/gokart-documentation/components/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>HW and Board Components - Infotiv Autonomous Platform</title>
+    <title>Main Hardware Components - Infotiv Autonomous Platform</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "HW and Board Components";
+        var mkdocs_page_name = "Main Hardware Components";
         var mkdocs_page_input_path = "components.md";
         var mkdocs_page_url = "/gokart-documentation/components/";
       </script>
@@ -48,62 +48,6 @@
                 <li class="toctree-l1"><a class="reference internal" href="../scope/">Scope and Goal</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Architecture</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../platform/">Automotive Platform</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../bodyelec/">Body Electronics</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../autonomous/">Autonomous Drive</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Components</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">HW and Board Components</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#nvidia-jetson-tx2-developer-kit">NVIDIA Jetson TX2 Developer Kit</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#stm32f103c8t6-blue-pill-development-board">STM32F103C8T6 - "Blue Pill" Development Board</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#arduino-nano">Arduino Nano</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mcp2515-tja1050-can-transceiver">MCP2515 / TJA1050 CAN transceiver</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#hc-sr04-sonar-sensor">HC-SR04 sonar sensor</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#emg49-gear-motor-with-encoder">EMG49 - Gear motor with encoder</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3d-printed-parts">3D printed parts</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#battery-and-battery-monitoring-system">Battery and Battery Monitoring System</a>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../interfaces/">Interfaces and Sensors</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../software/">Software Repositories</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Usage Manual</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../start/">Start the GoKart</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../issues-todo/">Common Issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../dev/">For Developers</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">About</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../projects/">Thesis Projects</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact Infotiv</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../terms/">Glossary of Terms</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../changelog/">ChangeLog</a>
-                  </li>
-              </ul>
       </div>
     </div>
     </nav>
@@ -117,8 +61,7 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Components &raquo;</li><li>HW and Board Components</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Main Hardware Components</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/infotiv-research/gokart-documentation/edit/master/docs/components.md"> Edit on infotiv-research/gokart-documentation</a>
     </li>
@@ -129,7 +72,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="main-hardware-components">Main Hardware Components<a class="headerlink" href="#main-hardware-components" title="Permanent link">&para;</a></h1>
+                <h1 id="main-hardware-components">Main Hardware Components</h1>
 <ul>
 <li>ECUs: CEM, ADAS, BMS, ECM/VCU, OBC, DC/DC, IHU, TEM</li>
 <li>Radar (4)</li>
@@ -154,7 +97,7 @@
 <p>More information about the internals: 
 <a href="https://www.fictiv.com/teardowns/segway-minipro-teardown">Segway miniPRO Teardown</a></p>
 <p>Communication between these parts are analysed in the <code>protectedDocuments/Gokart Serielanalys/Kommunikation för Gokart.docx</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
-<h2 id="nvidia-jetson-tx2-developer-kit">NVIDIA Jetson TX2 Developer Kit<a class="headerlink" href="#nvidia-jetson-tx2-developer-kit" title="Permanent link">&para;</a></h2>
+<h2 id="nvidia-jetson-tx2-developer-kit">NVIDIA Jetson TX2 Developer Kit</h2>
 <p>A backup of the system image is in the internal sharepoint <strong>(<a href="../contact/">Protected document</a>)</strong>. You can connect an HDMI cable to the ECU or connect to it remotely. The username for the image is <code>gokart1</code> and the password is <strong>(<a href="../contact/">Protected document</a>)</strong>.</p>
 <pre><code class="language-bash">$ uname -an
 Linux dobby 4.9.140-tegra #1 SMP PREEMPT Tue Oct 27 21:02:46 PDT 2020 aarch64 aarch64 aarch64 GNU/Linux
@@ -177,21 +120,21 @@ gokart1   8781  0.5  0.6 361616 54632 pts/0    Sl+  12:47   0:03 /usr/bin/python
 gokart1   9503  0.0  0.0   7216   644 pts/2    S+   12:59   0:00 grep --color=auto ros
 
 </code></pre>
-<h2 id="stm32f103c8t6-blue-pill-development-board">STM32F103C8T6 - "Blue Pill" Development Board<a class="headerlink" href="#stm32f103c8t6-blue-pill-development-board" title="Permanent link">&para;</a></h2>
+<h2 id="stm32f103c8t6-blue-pill-development-board">STM32F103C8T6 - "Blue Pill" Development Board</h2>
 <p>The Blue Pill is a development board based on ST Microelectronics’ STM32F103C8T6 microcontroller that has an ARM Cortex-M3 core that runs at 72MHz max. Most of the ECUs on the Infotiv Autonomous Platform, including the CEM, ADAS_DK and VCU are based on STM32s, coded in C++ in Infotiv’s own embedded framework.</p>
 <p><img alt="STM32 Blue Pill !" src="../assets/images/boards/STM32F103C8T6_Blue_Pill-1.jpg" title="STM32 Blue Pill" /></p>
 <p>Check this document for start-up guide for autonomous platform and STM32 <code>2019 - Praktik, Elschema och BOM för bilplatform/Platform V1/Bilplattform_STM32.pdf</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
-<h2 id="arduino-nano">Arduino Nano<a class="headerlink" href="#arduino-nano" title="Permanent link">&para;</a></h2>
+<h2 id="arduino-nano">Arduino Nano</h2>
 <p>The Arduino Nano is a small, complete development board based on the ATmega328 (Arduino Nano 3. x). It has more or less the same functionality as the Arduino Uno, but in a different package. It was used for the simple task of the CEM_DK (Power Mode requests + screen feedback) due to it’s small physical footprint.</p>
-<h2 id="mcp2515-tja1050-can-transceiver">MCP2515 / TJA1050 CAN transceiver<a class="headerlink" href="#mcp2515-tja1050-can-transceiver" title="Permanent link">&para;</a></h2>
+<h2 id="mcp2515-tja1050-can-transceiver">MCP2515 / TJA1050 CAN transceiver</h2>
 <p>This module combines the MCP2515 CAN controller with the TJA1050 CAN transceiver to a standalone unit that connects directly to the CAN-bus on one end and via SPI to the microcontroller on the other end. Most ECUs on the Autonomous Platform use one of these modules for CAN communication, and the CEM is equipped with three CAN transceivers, one for each bus.</p>
 <p><img alt="MCP2515!" src="../assets/images/boards/MCP2515.jpg" title="MCP2515" /></p>
-<h2 id="hc-sr04-sonar-sensor">HC-SR04 sonar sensor<a class="headerlink" href="#hc-sr04-sonar-sensor" title="Permanent link">&para;</a></h2>
+<h2 id="hc-sr04-sonar-sensor">HC-SR04 sonar sensor</h2>
 <p>This sensor uses ultrasonic sound to measure distance to objects in it’s way. It’s working range is specified to between 20 to 4000 mm. It’s simple to set up but has a drawback in it’s quite narrow field of vision. To compensate for this we use six sensors on the Gokart.</p>
-<h2 id="emg49-gear-motor-with-encoder">EMG49 - Gear motor with encoder<a class="headerlink" href="#emg49-gear-motor-with-encoder" title="Permanent link">&para;</a></h2>
-<h2 id="3d-printed-parts">3D printed parts<a class="headerlink" href="#3d-printed-parts" title="Permanent link">&para;</a></h2>
+<h2 id="emg49-gear-motor-with-encoder">EMG49 - Gear motor with encoder</h2>
+<h2 id="3d-printed-parts">3D printed parts</h2>
 <p>The 3D model files can be found in <code>protectedDocuments/2020 - Infotiv Autonomous Platform, Body Electronics Intern work Package/Gokart 3D models</code> folder   <strong>(<a href="../contact/">Protected document</a>)</strong></p>
-<h2 id="battery-and-battery-monitoring-system">Battery and Battery Monitoring System<a class="headerlink" href="#battery-and-battery-monitoring-system" title="Permanent link">&para;</a></h2>
+<h2 id="battery-and-battery-monitoring-system">Battery and Battery Monitoring System</h2>
 <p>To power the Body Electronics circuit require a battery of type Lipo 5000mAh 5S 25C Lipo Pack w/XT90. A LM2596 buck converter is used to step down the voltage from the battery to 12V powering the circuit
 The ECUs are powered by another Lipo battery with another buck converter that steps down to 5V.</p>
 <ul>
@@ -206,10 +149,6 @@ The ECUs are powered by another Lipo battery with another buck converter that st
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../autonomous/" class="btn btn-neutral float-left" title="Autonomous Drive"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../interfaces/" class="btn btn-neutral float-right" title="Interfaces and Sensors">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -231,10 +170,6 @@ The ECUs are powered by another Lipo battery with another buck converter that st
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../autonomous/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../interfaces/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

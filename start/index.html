@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="INFOTIV" /><link rel="canonical" href="https://infotiv-research.github.io/gokart-documentation/start/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Start the GoKart - Infotiv Autonomous Platform</title>
+    <title>Start - Infotiv Autonomous Platform</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Start the GoKart";
+        var mkdocs_page_name = "Start";
         var mkdocs_page_input_path = "start.md";
         var mkdocs_page_url = "/gokart-documentation/start/";
       </script>
@@ -48,46 +48,6 @@
                 <li class="toctree-l1"><a class="reference internal" href="../scope/">Scope and Goal</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Architecture</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../platform/">Automotive Platform</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../bodyelec/">Body Electronics</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../autonomous/">Autonomous Drive</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Components</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../components/">HW and Board Components</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../interfaces/">Interfaces and Sensors</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../software/">Software Repositories</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Usage Manual</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Start the GoKart</a>
-    <ul class="current">
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../issues-todo/">Common Issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../dev/">For Developers</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">About</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../projects/">Thesis Projects</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact Infotiv</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../terms/">Glossary of Terms</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../changelog/">ChangeLog</a>
-                  </li>
-              </ul>
       </div>
     </div>
     </nav>
@@ -101,8 +61,7 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Usage Manual &raquo;</li><li>Start the GoKart</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Start</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/infotiv-research/gokart-documentation/edit/master/docs/start.md"> Edit on infotiv-research/gokart-documentation</a>
     </li>
@@ -113,11 +72,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="caution">Caution<a class="headerlink" href="#caution" title="Permanent link">&para;</a></h3>
+                <h3 id="caution">Caution</h3>
 <p>You cannot turn of the gokart when the wheel are active. Make sure to stop it either using the RC controller or the command below:</p>
 <pre><code class="language-bash">rostopic pub Speed_Request_Speed std_msgs/Float32 0
 </code></pre>
-<h1 id="turning-on-the-gokart">Turning on the GoKart<a class="headerlink" href="#turning-on-the-gokart" title="Permanent link">&para;</a></h1>
+<h1 id="turning-on-the-gokart">Turning on the GoKart</h1>
 <p>Find all host in network with open ssh port</p>
 <pre><code class="language-bash">nmap -Pn -p22 192.168.150.1/24 -oG - | grep &quot;/open&quot; | awk '{ print $2 }'
 </code></pre>
@@ -125,7 +84,7 @@
 <pre><code class="language-bash">ssh -X gokart1@dobby.local
 ECDSA key fingerprint is SHA256:GkO/qyuwj+tCfwaZArQbMS8XsPUA4gfbMJdeTnqG1n4.
 </code></pre>
-<h2 id="access-to-the-camera-remotely">Access to the camera remotely<a class="headerlink" href="#access-to-the-camera-remotely" title="Permanent link">&para;</a></h2>
+<h2 id="access-to-the-camera-remotely">Access to the camera remotely</h2>
 <p>After updating the configuration file <code>rtsp-simple-server.yml</code> as below</p>
 <pre><code class="language-txt">paths:
   cam:
@@ -138,18 +97,14 @@ ECDSA key fingerprint is SHA256:GkO/qyuwj+tCfwaZArQbMS8XsPUA4gfbMJdeTnqG1n4.
 </code></pre>
 <pre><code class="language-bash">vlc -vvv --network-caching 200 rtsp://192.168.150.120:8554/cam
 </code></pre>
-<h2 id="battery">Battery<a class="headerlink" href="#battery" title="Permanent link">&para;</a></h2>
-<h2 id="using-power-supply">Using Power supply<a class="headerlink" href="#using-power-supply" title="Permanent link">&para;</a></h2>
-<h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
-<h2 id="remote-control">Remote control<a class="headerlink" href="#remote-control" title="Permanent link">&para;</a></h2>
+<h2 id="battery">Battery</h2>
+<h2 id="using-power-supply">Using Power supply</h2>
+<h2 id="tests">Tests</h2>
+<h2 id="remote-control">Remote control</h2>
 <p>The right panel can be used to move forward and make quick brakes. To reverse, double back (brake) reverses the gear. (IT is noticable from the beeping sound)</p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../software/" class="btn btn-neutral float-left" title="Software Repositories"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../issues-todo/" class="btn btn-neutral float-right" title="Common Issues">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -171,10 +126,6 @@ ECDSA key fingerprint is SHA256:GkO/qyuwj+tCfwaZArQbMS8XsPUA4gfbMJdeTnqG1n4.
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../software/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../issues-todo/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
