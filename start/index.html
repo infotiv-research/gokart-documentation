@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#turning-on-the-gokart" class="md-skip">
+        <a href="#caution" class="md-skip">
           Skip to content
         </a>
       
@@ -422,8 +422,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Start the GoKart
@@ -440,8 +438,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -450,44 +446,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#caution" class="md-nav__link">
+    Caution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turning-on-the-gokart" class="md-nav__link">
+    Turning on the GoKart
+  </a>
+  
+    <nav class="md-nav" aria-label="Turning on the GoKart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#access-to-the-camera-remotely" class="md-nav__link">
     Access to the camera remotely
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#battery" class="md-nav__link">
     Battery
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#using-power-supply" class="md-nav__link">
     Using Power supply
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#tests" class="md-nav__link">
     Tests
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#remote-control" class="md-nav__link">
-    Remote control
-  </a>
-  
-    <nav class="md-nav" aria-label="Remote control">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caution" class="md-nav__link">
-    Caution
+  <a href="#remote-control" class="md-nav__link">
+    Remote control
   </a>
   
 </li>
@@ -647,8 +650,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -657,44 +658,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#caution" class="md-nav__link">
+    Caution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turning-on-the-gokart" class="md-nav__link">
+    Turning on the GoKart
+  </a>
+  
+    <nav class="md-nav" aria-label="Turning on the GoKart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#access-to-the-camera-remotely" class="md-nav__link">
     Access to the camera remotely
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#battery" class="md-nav__link">
     Battery
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#using-power-supply" class="md-nav__link">
     Using Power supply
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#tests" class="md-nav__link">
     Tests
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#remote-control" class="md-nav__link">
-    Remote control
-  </a>
-  
-    <nav class="md-nav" aria-label="Remote control">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caution" class="md-nav__link">
-    Caution
+  <a href="#remote-control" class="md-nav__link">
+    Remote control
   </a>
   
 </li>
@@ -722,6 +730,10 @@
 
 
 
+<h3 id="caution">Caution<a class="headerlink" href="#caution" title="Permanent link">&para;</a></h3>
+<p>You cannot turn of the gokart when the wheel are active. Make sure to stop it either using the RC controller or the command below:</p>
+<pre><code class="language-bash">rostopic pub Speed_Request_Speed std_msgs/Float32 0
+</code></pre>
 <h1 id="turning-on-the-gokart">Turning on the GoKart<a class="headerlink" href="#turning-on-the-gokart" title="Permanent link">&para;</a></h1>
 <p>Find all host in network with open ssh port</p>
 <pre><code class="language-bash">nmap -Pn -p22 192.168.150.1/24 -oG - | grep &quot;/open&quot; | awk '{ print $2 }'
@@ -748,10 +760,6 @@ ECDSA key fingerprint is SHA256:GkO/qyuwj+tCfwaZArQbMS8XsPUA4gfbMJdeTnqG1n4.
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <h2 id="remote-control">Remote control<a class="headerlink" href="#remote-control" title="Permanent link">&para;</a></h2>
 <p>The right panel can be used to move forward and make quick brakes. To reverse, double back (brake) reverses the gear. (IT is noticable from the beeping sound)</p>
-<h3 id="caution">Caution<a class="headerlink" href="#caution" title="Permanent link">&para;</a></h3>
-<p>You cannot turn of the gokart when the wheel are active. Make sure to stop it either using the RC controller or the command below:</p>
-<pre><code class="language-bash">rostopic pub Speed_Request_Speed std_msgs/Float32 0
-</code></pre>
 
               
             </article>

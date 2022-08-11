@@ -450,12 +450,102 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          For Developers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         For Developers
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-roscanbus" class="md-nav__link">
+    building RosCanBus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gokart_controller-on-remote-client-machine" class="md-nav__link">
+    gokart_controller on remote client machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-git-setup" class="md-nav__link">
+    Local git setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stm32-blue-pill-development-environment" class="md-nav__link">
+    STM32 Blue Pill Development environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#st-link-dongle-to-the-blue-pill-connection" class="md-nav__link">
+    ST-LINK dongle to the Blue Pill connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-vcpu" class="md-nav__link">
+    Flash VCPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-messages" class="md-nav__link">
+    Debug messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-keys" class="md-nav__link">
+    SSH keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patches" class="md-nav__link">
+    Patches
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -575,8 +665,84 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-roscanbus" class="md-nav__link">
+    building RosCanBus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gokart_controller-on-remote-client-machine" class="md-nav__link">
+    gokart_controller on remote client machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-git-setup" class="md-nav__link">
+    Local git setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stm32-blue-pill-development-environment" class="md-nav__link">
+    STM32 Blue Pill Development environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#st-link-dongle-to-the-blue-pill-connection" class="md-nav__link">
+    ST-LINK dongle to the Blue Pill connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-vcpu" class="md-nav__link">
+    Flash VCPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-messages" class="md-nav__link">
+    Debug messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-keys" class="md-nav__link">
+    SSH keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patches" class="md-nav__link">
+    Patches
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -594,7 +760,9 @@
 
 
 
-<h1 id="building-roscanbus">building RosCanBus<a class="headerlink" href="#building-roscanbus" title="Permanent link">&para;</a></h1>
+  <h1>For Developers</h1>
+
+<h4 id="building-roscanbus">building RosCanBus<a class="headerlink" href="#building-roscanbus" title="Permanent link">&para;</a></h4>
 <pre><code>root of the ROSCANBUS project is /home/olle/SSD/ROS_projects/RosCanBus/src/roscanbus for building the project
 
 # To run the ruscanbus node:
@@ -603,7 +771,7 @@ kill -9 `pidof roscanbus_node` ; kill -9 `pidof roscore`  ; roscore &amp;
 kill -9 `pidof roscanbus_node` ; source /opt/ros/melodic/setup.sh; cd /home/olle/SSD/ROS_projects/RosCanBus; /home/olle/SSD/ROS_projects/RosCanBus/src/roscanbus/build/devel/lib/roscanbus/roscanbus_node
 
 </code></pre>
-<h1 id="services">Services<a class="headerlink" href="#services" title="Permanent link">&para;</a></h1>
+<h4 id="services">Services<a class="headerlink" href="#services" title="Permanent link">&para;</a></h4>
 <p>To install services you need to use the <a href="https://gitlab.infotivlab.se/internal-development/autonomous-platform/gokart/gokart_setup">following repository</a>:</p>
 <p><code>/etc/systemd/system/</code></p>
 <pre><code class="language-txt">[Unit]
@@ -622,7 +790,7 @@ WantedBy=multi-user.target
 sudo systemctl start  roscanbus.service
 sudo systemctl status roscanbus.service
 </code></pre>
-<h1 id="gokart_controller-on-remote-client-machine">gokart_controller on remote client machine<a class="headerlink" href="#gokart_controller-on-remote-client-machine" title="Permanent link">&para;</a></h1>
+<h4 id="gokart_controller-on-remote-client-machine">gokart_controller on remote client machine<a class="headerlink" href="#gokart_controller-on-remote-client-machine" title="Permanent link">&para;</a></h4>
 <p><strong> Make sure roscanbus_node is running on GoKart </strong></p>
 <pre><code class="language-bash">sudo apt-get install -y ros-sensor-msgs 
 export ROS_MASTER_URI=http://dobby.local:11311
@@ -634,14 +802,14 @@ cd gokart_controller
 python3 test.py 
 
 </code></pre>
-<h2 id="local-git-setup">Local git setup<a class="headerlink" href="#local-git-setup" title="Permanent link">&para;</a></h2>
+<h4 id="local-git-setup">Local git setup<a class="headerlink" href="#local-git-setup" title="Permanent link">&para;</a></h4>
 <pre><code class="language-txt">Host gitlab.infotivlab.se
     Hostname 10.0.4.27
     IdentityFile ~/.ssh/id_rsa
     User git
 
 </code></pre>
-<h3 id="stm32-blue-pill-development-environment">STM32 Blue Pill Development environment<a class="headerlink" href="#stm32-blue-pill-development-environment" title="Permanent link">&para;</a></h3>
+<h4 id="stm32-blue-pill-development-environment">STM32 Blue Pill Development environment<a class="headerlink" href="#stm32-blue-pill-development-environment" title="Permanent link">&para;</a></h4>
 <pre><code>sudo apt-get install gcc-arm-none-eabi libnewlib-arm-none-eabi
 arm-none-eabi-newlib # arch 
 
@@ -705,8 +873,8 @@ First test
 
 
 </code></pre>
-<h3 id="st-link-dongle-to-the-blue-pill-connection">ST-LINK dongle to the Blue Pill connection<a class="headerlink" href="#st-link-dongle-to-the-blue-pill-connection" title="Permanent link">&para;</a></h3>
-<h2 id="flash-vcpu">Flash VCPU<a class="headerlink" href="#flash-vcpu" title="Permanent link">&para;</a></h2>
+<h4 id="st-link-dongle-to-the-blue-pill-connection">ST-LINK dongle to the Blue Pill connection<a class="headerlink" href="#st-link-dongle-to-the-blue-pill-connection" title="Permanent link">&para;</a></h4>
+<h4 id="flash-vcpu">Flash VCPU<a class="headerlink" href="#flash-vcpu" title="Permanent link">&para;</a></h4>
 <p><img alt="ST-LINK dongle" src="../assets/images/bluepill.jpeg" title="ST-LINK dongle" /></p>
 <p>Create a file called openocd.cfg</p>
 <pre><code class="language-txt">source [find interface/stlink-v2.cfg]
@@ -788,11 +956,6 @@ make[1]: Leaving directory '/home/hamid/repositories/GOKART/gokart_vcu'
 <pre><code class="language-bash">sudo miniterm /dev/ttyUSB0 115200
 
 [33;1m[WARNING]␛[0m No message from CAN. Restarting MCP2515
-
-
-#### Image backups in Sharepoint
-
-
 </code></pre>
 <h4 id="ssh-keys">SSH keys<a class="headerlink" href="#ssh-keys" title="Permanent link">&para;</a></h4>
 <p>There are already one ssh key added as an auithorized key to the gokart. copy the content of <code>/protectedDocuments/SSHKeys</code> <strong>(<a href="../contact/">Protected document</a>)</strong> to <code>~/.ssh/</code> directory. You will be able to connect to gokart without using password as below</p>
@@ -800,6 +963,78 @@ make[1]: Leaving directory '/home/hamid/repositories/GOKART/gokart_vcu'
 </code></pre>
 <p>As an example you can shutdown the jetson board  like this:</p>
 <pre><code class="language-bash">ssh gokart1@dobby.local &quot;shutdown -h now&quot;
+</code></pre>
+<h4 id="patches">Patches<a class="headerlink" href="#patches" title="Permanent link">&para;</a></h4>
+<p>Patches for fixing the issue with remote control</p>
+<pre><code>void RcView::updateSpeedPulse() 
+{
+    speedData_ = RC_SPEED_INPUT.get();
+    if(speedData_ == 1 &amp;&amp; previousSpeedData_ != 1)
+    {
+        speedStartTime_ = get_system_time_ns();
+    }
+    else if(speedData_ == 0 &amp;&amp; previousSpeedData_ == 1)
+    {
+        speedEndTime_ = get_system_time_ns();
+        if(speedEndTime_ - speedStartTime_ &gt; minSpeedPulse_ &amp;&amp; speedEndTime_ - speedStartTime_ &lt; maxSpeedPulse_) //Remove all misscalculations when timer overflows.
+        {
+            speedPulse_ = speedEndTime_ - speedStartTime_;
+            float speedReq = linearConversion(speedPulse_, minSpeedPulse_, maxSpeedPulse_, 0, 1);
+
+            if (speedReq &gt; 1) speedReq = 1;
+            else if (speedReq &lt; 0) speedReq = 0;
+
+            if(speedReq &gt; 0.55) //Acceleration signal
+            {
+                speedReq = (speedReq - 0.55) / (0.45);
+                gokartModel_-&gt;setSpeedRequest(speedReq);
+            }
+            else if(speedReq &lt; 0.45) //brake signal
+            {
+                float brake_req = (speedReq / 0.45); 
+                gokartModel_-&gt;setBrakeRequest(brake_req);
+            }
+            else
+            {
+                gokartModel_-&gt;setSpeedRequest(0);
+                gokartModel_-&gt;setBrakeRequest(0);
+            }
+
+        }
+    }
+    previousSpeedData_ = speedData_;
+}
+
+</code></pre>
+<p>The left steering is not implemented correctly or NOT at all</p>
+<ol>
+<li>gokart_controller / gokart_controller.py</li>
+</ol>
+<pre><code>     def set_power_enable(self):
+        raise NotImplementedError
+
+    def set_speed(self, speed):
+        raise NotImplementedError
+
+    def set_turn_rate(self, degrees):
+        raise NotImplementedError
+</code></pre>
+<ol>
+<li>last commit on gokart/Gokart_VCU</li>
+</ol>
+<pre><code>src/controllers/GokartController.cpp  
+
+- #define minTurnPWM_ 0.069
+- #define maxTurnPWM_ 0.051
++ #define minTurnPWM_ 0.074
++ #define maxTurnPWM_ 0.047
+
+src/views/RcView.h 
+
+-  static const int minTurnPulse_ = 1130000;
+-  static const int maxTurnPulse_ = 1930000;
++  static const int minTurnPulse_ = 1050000;
++  static const int maxTurnPulse_ = 1850000;
 </code></pre>
 
               
