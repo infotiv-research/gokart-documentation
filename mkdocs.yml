@@ -90,7 +90,7 @@ plugins:
       two_columns_level: 3
       render_js: true
       #headless_chrome_path: google-chrome
-      output_path: ../infotiv-gokart.pdf
+      output_path: ../docs/assets/documents/infotiv-gokart.pdf
       #debug_html: true
       #verbose: true
       #show_anchors: true

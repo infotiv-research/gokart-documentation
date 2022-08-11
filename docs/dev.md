@@ -1,4 +1,4 @@
-# building RosCanBus
+#### building RosCanBus
 
 ```
 root of the ROSCANBUS project is /home/olle/SSD/ROS_projects/RosCanBus/src/roscanbus for building the project
@@ -10,7 +10,7 @@ kill -9 `pidof roscanbus_node` ; source /opt/ros/melodic/setup.sh; cd /home/olle
 
 ```
 
-# Services 
+#### Services 
 
 To install services you need to use the [following repository](https://gitlab.infotivlab.se/internal-development/autonomous-platform/gokart/gokart_setup):
 
@@ -39,7 +39,7 @@ sudo systemctl status roscanbus.service
 ```
 
 
-# gokart_controller on remote client machine
+#### gokart_controller on remote client machine
 
 ** Make sure roscanbus_node is running on GoKart **
 
@@ -56,7 +56,7 @@ python3 test.py
 ```
 
 
-## Local git setup
+#### Local git setup
 
 
 ```txt
@@ -68,7 +68,7 @@ Host gitlab.infotivlab.se
 ```
 
 
-### STM32 Blue Pill Development environment
+#### STM32 Blue Pill Development environment
 ```
 sudo apt-get install gcc-arm-none-eabi libnewlib-arm-none-eabi
 arm-none-eabi-newlib # arch 
@@ -135,11 +135,11 @@ First test
 ```
 
 
-### ST-LINK dongle to the Blue Pill connection
+#### ST-LINK dongle to the Blue Pill connection
 
 
 
-## Flash VCPU
+#### Flash VCPU
 
 ![ST-LINK dongle](assets/images/bluepill.jpeg "ST-LINK dongle")
 
@@ -235,11 +235,6 @@ To see the debug messages that are shown in the serial port with `logger.error()
 sudo miniterm /dev/ttyUSB0 115200
 
 [33;1m[WARNING]␛[0m No message from CAN. Restarting MCP2515
-
-
-#### Image backups in Sharepoint
-
-
 ```
 
 
@@ -255,4 +250,81 @@ ssh gokart1@dobby.local
 As an example you can shutdown the jetson board  like this:
 ```bash
 ssh gokart1@dobby.local "shutdown -h now"
+```
+
+#### Patches
+
+Patches for fixing the issue with remote control
+```
+void RcView::updateSpeedPulse() 
+{
+	speedData_ = RC_SPEED_INPUT.get();
+	if(speedData_ == 1 && previousSpeedData_ != 1)
+	{
+		speedStartTime_ = get_system_time_ns();
+	}
+	else if(speedData_ == 0 && previousSpeedData_ == 1)
+	{
+		speedEndTime_ = get_system_time_ns();
+        if(speedEndTime_ - speedStartTime_ > minSpeedPulse_ && speedEndTime_ - speedStartTime_ < maxSpeedPulse_) //Remove all misscalculations when timer overflows.
+        {
+            speedPulse_ = speedEndTime_ - speedStartTime_;
+			float speedReq = linearConversion(speedPulse_, minSpeedPulse_, maxSpeedPulse_, 0, 1);
+
+        	if (speedReq > 1) speedReq = 1;
+        	else if (speedReq < 0) speedReq = 0;
+
+        	if(speedReq > 0.55) //Acceleration signal
+        	{
+				speedReq = (speedReq - 0.55) / (0.45);
+				gokartModel_->setSpeedRequest(speedReq);
+        	}
+			else if(speedReq < 0.45) //brake signal
+			{
+				float brake_req = (speedReq / 0.45); 
+				gokartModel_->setBrakeRequest(brake_req);
+			}
+			else
+			{
+				gokartModel_->setSpeedRequest(0);
+				gokartModel_->setBrakeRequest(0);
+			}
+			
+        }
+	}
+	previousSpeedData_ = speedData_;
+}
+
+```
+
+
+The left steering is not implemented correctly or NOT at all
+
+1. gokart_controller / gokart_controller.py
+```
+     def set_power_enable(self):
+        raise NotImplementedError
+
+    def set_speed(self, speed):
+        raise NotImplementedError
+
+    def set_turn_rate(self, degrees):
+        raise NotImplementedError
+```
+
+2. last commit on gokart/Gokart_VCU
+```
+src/controllers/GokartController.cpp  
+
+- #define minTurnPWM_ 0.069
+- #define maxTurnPWM_ 0.051
++ #define minTurnPWM_ 0.074
++ #define maxTurnPWM_ 0.047
+
+src/views/RcView.h 
+
+-  static const int minTurnPulse_ = 1130000;
+-  static const int maxTurnPulse_ = 1930000;
++  static const int minTurnPulse_ = 1050000;
++  static const int maxTurnPulse_ = 1850000;
 ```

@@ -1,25 +1,22 @@
 # Automotive Platform ECUs
-
-The purpose of ECUs in the platform (CEM, ADAS, BMS, ECM/VCU, OBC, DC/DC, IHU, TEM) are best described in `/protectedDocuments/Infotiv Research and Education Go-kart Platform/Old Product & Functional Description of IES Education platform.docx` **([Protected document](contact.md))**
+Automotive Platform consist of several ECUs and the purpose of these ECUs (CEM, ADAS, BMS, ECM/VCU, OBC, DC/DC, IHU, TEM) are best described in `/protectedDocuments/Infotiv Research and Education Go-kart Platform/Old Product & Functional Description of IES Education platform.docx` **([Protected document](contact.md))**
 
 System Overview:
 ![System Overview!](assets/images/system-overview.png "System Overview")
 
-General purpose:
-Complete HW with basic function implementation to be able to integrate the previous car platforms (Ultrasonic platform, LIDAR platform and Vision Platform) into one combined platform.
-
 The platform includes three different CAN bus-systems:
+
 - Propulsion CAN
 - Safety CAN
 - Infotainment CAN
 
 
-The three CAN buses and communication between them shall all be routed through the CEM, which will act as gateway and general body electronics module.
+The communication between these three CAN buses shall all be routed through the CEM, which will act as gateway and general body electronics module.
 
 ## ECU function level
 
 ### CEM 
-- Gateway functionality between the three buses defined in General purpose
+- Gateway functionality between the three buses
           
 ### ADAS
 - Read input from ADAS sensors (Ultrasonic, Vision, LIDAR, Radar)
@@ -32,7 +29,7 @@ The three CAN buses and communication between them shall all be routed through t
 - Be able to communicate with CEM and ECM/VCU
 	* SOC value 
 	* Battery contactor status
-	* Etc
+	* etc
       
 ### ECM/VCU
 - Be able to control electrical motors 1, 2, 3 and 4 (speed and steering angle)

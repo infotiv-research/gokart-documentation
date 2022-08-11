@@ -15,12 +15,11 @@ mkdir ./docs-src/
 sudo mount --bind  DOCUMENT_DIRECTORY_with_mkdocs.yml ./docs-src/
 
 e.g
-sudo mount --bind  /home/wave/GoKart/iGoKart ./docs-src/
-
-rm mkdocs.yml 
-cp pdf-mkdocs.yml mkdocs.yml 
+export GOKARTDOC=/home/wave/GoKart/gokart-documentation
+sudo mount --bind  $GOKARTDOC ./docs-src/
 docker-compose build
 docker-compose run debian build
+cp 
 ```
 
 

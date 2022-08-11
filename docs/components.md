@@ -5,15 +5,14 @@
 - Lidar (1)
 - Ultrasonic (4)
 - Camera (1)
-- (Stereo vision (1))
+- Stereo vision (1)
 - HV – battery (1)
 - LV – battery (1)
 - Motors (4)
 - Wheel speed sensors (4)
 - OBD2 connector (1)
 - Charging connector (1)
-- “GPS” (no function)
-GoKart
+- GPS (no function)
 
 ![Hardware block diagram!](assets/images/hwblock.png " Hardware block diagram")
 
@@ -29,8 +28,8 @@ More information about the internals:
 Communication between these parts are analysed in the `protectedDocuments/Gokart Serielanalys/Kommunikation för Gokart.docx` **([Protected document](contact.md))**
 
 ## NVIDIA Jetson TX2 Developer Kit
-Find a backup of the image in `TODO` **([Protected document](contact.md))**.
-The username for the image is `gokart1` and the password is **([Protected document](contact.md))**.
+A backup of the system image is in the internal sharepoint **([Protected document](contact.md))**. You can connect an HDMI cable to the ECU or connect to it remotely. The username for the image is `gokart1` and the password is **([Protected document](contact.md))**.
+
 ```bash
 $ uname -an
 Linux dobby 4.9.140-tegra #1 SMP PREEMPT Tue Oct 27 21:02:46 PDT 2020 aarch64 aarch64 aarch64 GNU/Linux
@@ -53,7 +52,7 @@ gokart1   8781  0.5  0.6 361616 54632 pts/0    Sl+  12:47   0:03 /usr/bin/python
 gokart1   9503  0.0  0.0   7216   644 pts/2    S+   12:59   0:00 grep --color=auto ros
 
 ```
-## STM32F103C8T6 - ”Blue Pill” Development Board
+## STM32F103C8T6 - "Blue Pill" Development Board
 
 The Blue Pill is a development board based on ST Microelectronics’ STM32F103C8T6 microcontroller that has an ARM Cortex-M3 core that runs at 72MHz max. Most of the ECUs on the Infotiv Autonomous Platform, including the CEM, ADAS_DK and VCU are based on STM32s, coded in C++ in Infotiv’s own embedded framework.
 
@@ -78,7 +77,7 @@ This sensor uses ultrasonic sound to measure distance to objects in it’s way. 
 
 
 ## 3D printed parts
-Find the 3D model files in `protectedDocuments/2020 - Infotiv Autonomous Platform, Body Electronics Intern work Package/Gokart 3D models` folder   **([Protected document](contact.md))**
+The 3D model files can be found in `protectedDocuments/2020 - Infotiv Autonomous Platform, Body Electronics Intern work Package/Gokart 3D models` folder   **([Protected document](contact.md))**
 
 ## Battery and Battery Monitoring System
 

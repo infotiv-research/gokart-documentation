@@ -7,7 +7,7 @@
 * IHU (Infotainment Head Unit)
 * IMU (Inertial measurement unit)
 * VCU (Vehicle Control Unit)
-* TEM
+* TEM 
 * IHU
 * BMS (Battery monitoring system)
 * ECM
@@ -15,4 +15,3 @@
 * ACC (Adaptive Cruise Control)
 * FCW (Forward Collision Warning)
 * LDW (Lane Departure Warning)
-* IES

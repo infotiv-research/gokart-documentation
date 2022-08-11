@@ -12,6 +12,8 @@ Customers:
  * Resaerch Projects
  * Educational platform for External customer
 
+Please contact us if you are interested to work on any of these projects:
+
 ## NextGen Autonomous Platform
 
 - Upgrading the ECUs (Nvidia Jetson)
