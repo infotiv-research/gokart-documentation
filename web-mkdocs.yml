@@ -5,7 +5,7 @@ repo_name: infotiv-research/gokart-documentation
 repo_url: https://github.com/infotiv-research/gokart-documentation
 
 theme:
-  name: 'material'
+  name: 'readthedocs'
   feature:
     - navigation.tabs
     - navigation.tracking

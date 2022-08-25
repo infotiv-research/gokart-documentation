@@ -47,6 +47,7 @@
 - ❌ reenable RC sttering, not sending neutral steering but just L&R  (see throttle for inspiration)
 - ❌ Fix carla streering value range
 - ❌ Make a command to stop wheel before killing the openpilot docker process
+- ❌ Fix hostname (dobby.local) translation inside docker (pass hostname as an environemnt variable)
 
 Patches for fixing the issue with remote control
 ```
