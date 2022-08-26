@@ -32,15 +32,14 @@ def webcam(camerad: Camerad, exit_event: threading.Event):
   ...
 ```
 
-Running the docker container results in several scripts to be executed in parallel (`see tmux_script.sh`). 
+Running the docker container results in several scripts to be executed in parallel (`see tmux_script.sh`). You can switch between them using `~` key or the combination of keys like: `~ + 1` for terminal one, `~ + 2` for terminal two, etc. 
+
 If there is communication issues please make sure that the IP addresses and the hostname for ROS_MASTER_URI, ROS_IP and node_uri are correctly specified in `tmux_script.sh` and `gokart.py`. 
 
+** Please not that it is not always possible to use the hostname `dobby.local` inside the docker. **
 
-> Please not that for some reason it is not possible to use the hostname `dobby.local` inside the docker.
-
-
+To stop the docker container:
 ```bash
-docker ps
 docker kill openpilot_client
 ```
 
