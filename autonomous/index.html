@@ -116,13 +116,34 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="autonomous-drive">Autonomous Drive<a class="headerlink" href="#autonomous-drive" title="Permanent link">&para;</a></h1>
+<p>The Autonomous Drive in GoKart is based on OpenPilot project. </p>
+<blockquote>
+<p>“openpilot is an open source driver assistance system. Currently, openpilot performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW), and Lane Departure Warning (LDW) for a growing variety of supported car makes, models, and model years. In addition, while openpilot is engaged, a camera-based Driver Monitoring (DM) feature alerts distracted and asleep drivers. See more about the vehicle integration and limitations.” (https://github.com/commaai/openpilot)</p>
+</blockquote>
 <h2 id="openpilot-integration">OpenPilot Integration<a class="headerlink" href="#openpilot-integration" title="Permanent link">&para;</a></h2>
-<pre><code class="language-bash">cd openpilot &amp;&amp; pipenv shell
-cd ~/openpilot/selfdrive/manager
-PASSIVE=0 NOSENSOR=1 USE_WEBCAM=1 ./manager.py
+<p>The Integration uses code from the bridge that allows it to run OpenPilot in the CARLA simulator. The modification made it possible to use the camera images and use of <code>gokart_controller</code> python library to control the GoKart throiugh ROS APIs.</p>
+<p><img alt="OpenPilot driving the GoKart!" src="../assets/images/op_gokart.png" title="OpenPilot driving the GoKart" /></p>
+<pre><code class="language-bash">git clone git@github.com:ebadi/openpilot_gokart.git --recursive
+cd openpilot-webcam/tools/sim
+./build_container.sh
+./start_openpilot_docker.sh
 </code></pre>
-<pre><code class="language-bash">docker ps
-docker kill openpilot_client
+<p>If there is any issue with the images shown on the dashboard (black image on dashboard or use of incorrect camera):</p>
+<ul>
+<li>Make sure that camera is connected to the machine (use <code>cheese</code> to verify that). </li>
+<li>Make sure that the camera device (<code>--device /dev/videoX</code>) is passed to the docker container in <code>start_openpilot_docker.sh</code> </li>
+<li>check that the right camera is selected in the <code>gokart.py</code>:</li>
+</ul>
+<pre><code>def webcam(camerad: Camerad, exit_event: threading.Event):
+  ...
+  cap = cv2.VideoCapture(6) #set camera ID here, index X in /dev/videoX
+  ...
+</code></pre>
+<p>Running the docker container results in several scripts to be executed in parallel (<code>see tmux_script.sh</code>). You can switch between them using <code>~</code> key or the combination of keys like: <code>~ + 1</code> for terminal one, <code>~ + 2</code> for terminal two, etc. </p>
+<p>If there is communication issues please make sure that the IP addresses and the hostname for ROS_MASTER_URI, ROS_IP and node_uri are correctly specified in <code>tmux_script.sh</code> and <code>gokart.py</code>. </p>
+<p><strong> Please not that it is not always possible to use the hostname <code>dobby.local</code> inside the docker. </strong></p>
+<p>To stop the docker container:</p>
+<pre><code class="language-bash">docker kill openpilot_client
 </code></pre>
               
             </div>
