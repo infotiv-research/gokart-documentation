@@ -28,23 +28,26 @@ Please contact us if you are interested to work on any of these projects:
 
 ## Autonomous Platform Machine Learning Module
 
-Using available sensors :
+Using available sensors extend the functinality of openpilot for:
 
-* ADAS
-* Traffic Sign Detection (Speed limit, ...)
-* Pedestrain Detection
-* Driver Awareness Detection
+- Driver Awareness and Monitoring Systems (DMS)
+- ADAS
+- Traffic Sign Detection (Speed limit, ...)
+- Pedestrain Detection
 
+There are improvements that needs to be done to finalize this project:
+Running OpenPilot on Jetson board (rather than an external laptop)
+Receving camera image frames through ROS (rather than via USB camera)
 
 ## Autonomous Platform Infotainment Dashboard
 
-* Visualisation
-* Interactive interfaces
+- Visualisation
+- Interactive interfaces
 
 ## Autonomous Platform Telematic System
 
-* Remote Update (Microcontroller and other ECUs)
-* Transmission of Sensor Data (Camera, Lidar, ...)
-* Real time remote control
+- Remote Update (Microcontroller and other ECUs)
+- Transmission of Sensor Data (Camera, Lidar, ...)
+- Real time remote control
 
 
