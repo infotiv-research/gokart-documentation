@@ -1,8 +1,9 @@
 # Project proposal
 
 ### Introduction:
-To increase the knowledge and expertise within the evolving automotive industry Infotiv AB developed the Infotiv's Educational Autonomous Platform. The goal of this platform is to have a autonomous GO-Kart, be it in a controlled test environment, that furthers development and research in the autonomous vehicle industry.
-The technical scope of this project will be ever-changing depending on the market need and introducing new technology within the automotive industry. It will include, but not limited to, development in areas such as: electrical hardware (PCB design, battery) and embedded systems, mechanical hardware, software and protocol design, sensing, perception and decision making using machine learning,  telematics and electromobility , app and UX design. 
+To increase the knowledge and expertise within the evolving automotive industry, Infotiv AB developed the Educational Autonomous Platform. The goal of thr platform is to have a autonomous GO-Kart that progresses research and development in the automotive industry.
+
+The technical scope of this project will be ever-changing depending on the market needs and as new technology within the automotive industry emerges. The scope including, but not limited to, development in electrical hardware (PCB design, battery), embedded systems, mechanical hardware (3D printed), software and protocol design, sensing, perception and decision making using machine learning, telematics and electromobility, mobile app and UX design.
 
 ### Current GoKart
 Currently the system is designed in three modules, Automotive platform that implements the core driving functionality (steering, throttle and brake) through CAN bus . Body electronics which includes lights, sensors, horn and monitor displaying the platform power mode and a simulated key.
