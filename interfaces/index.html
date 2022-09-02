@@ -141,7 +141,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../projects/">Thesis Projects</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../project-proposal/">Project Projects</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../project-proposal/">Project Proposal</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact Infotiv</a>
                   </li>
@@ -176,7 +176,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="interfaces-and-sensors">Interfaces and Sensors<a class="headerlink" href="#interfaces-and-sensors" title="Permanent link">&para;</a></h1>
-<p>There are several sensor installed on Infotiv Autonomous Platform</p>
+<p>There are several sensors installed on Infotiv Autonomous Platform</p>
 <ul>
 <li>Camera (Raspberry Pi Camera V2 Video Module )</li>
 <li>Ultrasonic (Ultrasonic Sensor HC-SR04)</li>
@@ -187,11 +187,11 @@
 <li>IMU </li>
 </ul>
 <h2 id="robot-operating-system-ros">Robot Operating System (ROS)<a class="headerlink" href="#robot-operating-system-ros" title="Permanent link">&para;</a></h2>
-<p>The user interfaces with ADAS through the terminal of a Linux-computer running ROS (Robot Operating System). A python-script on the computer calls ROS methods to publish and subscribe to ”topics”. On ADAS a CAN-gateway is running that converts ROS-topics into CAN-messages and vice versa. The computer connects to ADAS via wifi.
-By setting the data of a ROS-topic that corresponds to a CAN-message sent out by ADAS, the user can control other units that listens to the CAN-message. The CEM unit receives CAN-messages from ADAS requesting changes in Body Electronics (headlight, taillight, blinkers, horn, moodlight) behaviour. Depending on the state of the Power Mode, the changes are performed or denied.</p>
+<p>The user interfaces with ADAS through the terminal of a Linux computer running ROS (Robot Operating System). A python-script on the computer calls ROS methods to publish and subscribe to ”topics”. On ADAS a CAN gateway is running that converts ROS-topics into CAN-messages and vice versa. The computer connects to ADAS via wifi.
+By setting the data of a ROS topic that corresponds to a CAN message sent out by ADAS, the user can control other units that listen to the CAN message. The CEM unit receives CAN message from ADAS requesting changes in Body Electronics (headlight, taillight, blinkers, horn, mood light) behavior. Depending on the state of the Power Mode, the changes are performed or denied.</p>
 <p><img alt="System overview!" src="../assets/images/rosgw.png" title="System overview" /></p>
-<p>Requests to change the Power Mode can come from ADAS, or from a physical interface with buttons and a screen on the Gokart. This ECU, named DIM, sends CAN-messages requesting Power Mode changes, and receives CAN-messages from CEM with the updated Power Mode State. The screen shows the updated Power Mode State.
-The user can also subscribe to topics corresponding to CAN-messages received on ADAS. Part of the Body Electronics Intern Package is the Sonar Sensors Module (SSM) which is hosting six Sonar sensors that put out distance data. SSM converts the data to CAN-messages, which are transmitted to the bus and received by ADAS. Using the python script or the rostopic echo method on the computer, the user can monitor the sonar distance data in real time.</p>
+<p>Requests to change the Power Mode can come from ADAS, or from a physical interface with buttons and a screen on the Gokart. This ECU, named DIM, sends CAN messages requesting Power Mode changes and receives CAN messages from CEM with the updated Power Mode State. The screen shows the updated Power Mode State.
+The user can also subscribe to topics corresponding to CAN messages received on ADAS. Part of the Body Electronics Intern Package is the Sonar Sensors Module (SSM) which is hosting six Sonar sensors that put out distance data. SSM converts the data to CAN messages, which are transmitted to the bus and received by ADAS. Using the python script or the rostopic echo method on the computer, the user can monitor the sonar distance data in real-time.</p>
 <p>Can publisher http://dobby.local:35991</p>
 <p>Version: melodic
 <a href="https://wiki.ros.org/melodic/Installation/Ubuntu">Installing ROS</a></p>
@@ -864,7 +864,7 @@ done
 
 </code></pre>
 <h2 id="wifi-interface">Wifi interface<a class="headerlink" href="#wifi-interface" title="Permanent link">&para;</a></h2>
-<p>By default the jetson board is configued to connect to <code>Infolab2</code> wifi network. The credential for the network is available in 
+<p>By default, the jetson board is configured to connect to <code>Infolab2</code> wifi network. The credential for the network is available in 
 <code>/protectedDocuments/Credential.txt</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
 <p>an IP in the range of 192.168.150.X is usually assigned to the client.</p>
 <pre><code>nmcli c s Infolab2 
@@ -879,7 +879,7 @@ wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 </code></pre>
 <h2 id="remote-control">Remote Control<a class="headerlink" href="#remote-control" title="Permanent link">&para;</a></h2>
-<p>It is possible to control the GoKart using Remote Control system.</p>
+<p>It is possible to control the GoKart using the Remote Control system.</p>
 <p>Spektrum DX6e 6CH System w/ AR610</p>
 <p><img alt="DX6e 6CH System w/ AR610 Receiver" src="../assets/images/spektrum.jpg" title="DX6e 6CH System w/ AR610 Receiver https://www.spektrumrc.com/Products/Default.aspx?ProdId=SPM6650" /></p>
 <p>TODO: Picture 

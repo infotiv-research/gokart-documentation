@@ -115,7 +115,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../projects/">Thesis Projects</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../project-proposal/">Project Projects</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../project-proposal/">Project Proposal</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact Infotiv</a>
                   </li>
@@ -153,13 +153,13 @@
 <p>Automotive Platform consist of several ECUs and the purpose of these ECUs (CEM, ADAS, BMS, ECM/VCU, OBC, DC/DC, IHU, TEM) are best described in <code>/protectedDocuments/Infotiv Research and Education Go-kart Platform/Old Product &amp; Functional Description of IES Education platform.docx</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
 <p>System Overview:
 <img alt="System Overview!" src="../assets/images/system-overview.png" title="System Overview" /></p>
-<p>The platform includes three different CAN bus-systems:</p>
+<p>The platform includes three different CAN bus systems:</p>
 <ul>
 <li>Propulsion CAN</li>
 <li>Safety CAN</li>
 <li>Infotainment CAN</li>
 </ul>
-<p>The communication between these three CAN buses shall all be routed through the CEM, which will act as gateway and general body electronics module.</p>
+<p>The communication between these three CAN buses shall all be routed through the CEM, which will act as a gateway and general body electronics module.</p>
 <h2 id="ecu-function-level">ECU function level<a class="headerlink" href="#ecu-function-level" title="Permanent link">&para;</a></h2>
 <h3 id="cem">CEM<a class="headerlink" href="#cem" title="Permanent link">&para;</a></h3>
 <ul>
@@ -168,23 +168,23 @@
 <h3 id="adas">ADAS<a class="headerlink" href="#adas" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Read input from ADAS sensors (Ultrasonic, Vision, LIDAR, Radar)</li>
-<li>Copy functionality from previous car platforms and educations regarding ADAS sensors</li>
-<li>Be able to send propulsive request to the ECM/VCU (through CEM)</li>
+<li>Copy functionality from previous car platforms and education regarding ADAS sensors</li>
+<li>Be able to send the propulsive request to the ECM/VCU (through CEM)</li>
 </ul>
 <h3 id="bms">BMS<a class="headerlink" href="#bms" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Read battery voltage (generate simplified SOC)</li>
-<li>Be able to control HV-battery contactors (on/off)</li>
+<li>Be able to control HV-battery contractors (on/off)</li>
 <li>Be able to communicate with CEM and ECM/VCU<ul>
 <li>SOC value </li>
-<li>Battery contactor status</li>
+<li>Battery contractor status</li>
 <li>etc</li>
 </ul>
 </li>
 </ul>
 <h3 id="ecmvcu">ECM/VCU<a class="headerlink" href="#ecmvcu" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Be able to control electrical motors 1, 2, 3 and 4 (speed and steering angle)</li>
+<li>Be able to control electrical motors 1, 2, 3, and 4 (speed and steering angle)</li>
 <li>Receive input from all ECUs (from CEM)</li>
 <li>Output applicable signals to ADAS (through CEM) and BMS (directly)</li>
 <li>Measure speed via speedometer wheel sensors</li>
@@ -192,7 +192,7 @@
 <h3 id="tem">TEM<a class="headerlink" href="#tem" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Receive selected signals via CEM</li>
-<li>Output above signals via WiFi to be able to be received by Android APP</li>
+<li>Output the above signals via WiFi to be able to be received by Android APP</li>
 <li>Receive signals via WiFi to be sent via CEM to ECM/VCU<ul>
 <li>Emergency STOP (vehicle speed = 0)</li>
 </ul>
@@ -245,14 +245,14 @@
 <h2 id="software-level">Software Level<a class="headerlink" href="#software-level" title="Permanent link">&para;</a></h2>
 <p>The ADAS software is written in Python while the ADAS DK aswell as the other ECU’s software is written in c++. </p>
 <h3 id="adas_1">ADAS<a class="headerlink" href="#adas_1" title="Permanent link">&para;</a></h3>
-<p>On boot the ADAS launches its server. The server script, car_server.py, starts two threads, one publisher thread and one reply thread. The publisher thread publishes sensor data and the reply thread awaits commands and then executes the commands. 
-The two reply threads are used for slightly different things. One is used to send set speed/turn rate commands to the ADAS and to forward I/O messages to the CEM. The other is used to send config data to whatever infotainment system require it.</p>
+<p>On boot, the ADAS launches its server. The server script, car_server.py, starts two threads, one publisher thread, and one reply thread. The publisher thread publishes sensor data and the reply thread awaits commands and then executes the commands. 
+The two reply threads are used for slightly different things. One is used to send set speed/turn rate commands to the ADAS and to forward I/O messages to the CEM. The other is used to send config data to whatever infotainment system requires it.</p>
 <h3 id="cem_1">CEM<a class="headerlink" href="#cem_1" title="Permanent link">&para;</a></h3>
-<p>The CEM listens to the CAN bus and analyses each message. Based on a list of signals it matches the messages to a certain instruction, e.g. a certain message type is set speed, so it forwards the message onto the propulsion CAN bus for the VCU to handle. The CEM is the central module that keeps track of the state of the entire platform.</p>
+<p>The CEM listens to the CAN bus and analyses each message. Based on a list of signals it matches the messages to a certain instruction, e.g. a certain message type is set to speed, so it forwards the message onto the propulsion CAN bus for the VCU to handle. The CEM is the central module that keeps track of the state of the entire platform.</p>
 <h3 id="vcu">VCU<a class="headerlink" href="#vcu" title="Permanent link">&para;</a></h3>
-<p>The VCU is continuously sending wheel speed data to the CAN-bus. It is listening to the CAN bus for speed and turn rate requests and sends them to the PID which eventually modifies the values.</p>
+<p>The VCU is continuously sending wheel speed data to the CAN bus. It is listening to the CAN bus for speed and turn rate requests and sends them to the PID which eventually modifies the values.</p>
 <h3 id="bms_1">BMS<a class="headerlink" href="#bms_1" title="Permanent link">&para;</a></h3>
-<p>The BMS is continuously sending information regarding voltage and current onto the CAN bus. It is also listening on the CAN bus for power mode signals which it handles by switching relays in order to give power to the motor.</p>
+<p>The BMS is continuously sending information regarding voltage and current onto the CAN bus. It is also listening on the CAN bus for power mode signals which it handles by switching relays to give power to the motor.</p>
               
             </div>
           </div><footer>

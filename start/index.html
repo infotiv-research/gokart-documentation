@@ -81,7 +81,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../projects/">Thesis Projects</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../project-proposal/">Project Projects</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../project-proposal/">Project Proposal</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../contact/">Contact Infotiv</a>
                   </li>
@@ -116,11 +116,11 @@
             <div class="section" itemprop="articleBody">
               
                 <h3 id="caution">Caution<a class="headerlink" href="#caution" title="Permanent link">&para;</a></h3>
-<p>You cannot turn of the gokart when the wheel are active. Make sure to stop it either using the RC controller or the command below:</p>
+<p>You cannot turn off the go-kart when the wheel is active. Make sure to stop it either using the RC controller or the command below:</p>
 <pre><code class="language-bash">rostopic pub Speed_Request_Speed std_msgs/Float32 0
 </code></pre>
 <h1 id="turning-on-the-gokart">Turning on the GoKart<a class="headerlink" href="#turning-on-the-gokart" title="Permanent link">&para;</a></h1>
-<p>Find all host in network with open ssh port</p>
+<p>Find all hosts in the network with open ssh port:</p>
 <pre><code class="language-bash">nmap -Pn -p22 192.168.150.1/24 -oG - | grep &quot;/open&quot; | awk '{ print $2 }'
 </code></pre>
 <p>ssh fingerprint:</p>
@@ -136,15 +136,15 @@ ECDSA key fingerprint is SHA256:GkO/qyuwj+tCfwaZArQbMS8XsPUA4gfbMJdeTnqG1n4.
 
 </code></pre>
 <p>Execute rtsp-simple-server_v0.19.1_linux_arm64v8/ server:</p>
-<pre><code class="language-bash">./rtsp-simple-server    
+<pre><code class="language-bash">./rtsp-simple-server
 </code></pre>
 <pre><code class="language-bash">vlc -vvv --network-caching 200 rtsp://192.168.150.120:8554/cam
 </code></pre>
 <h2 id="battery">Battery<a class="headerlink" href="#battery" title="Permanent link">&para;</a></h2>
-<h2 id="using-power-supply">Using Power supply<a class="headerlink" href="#using-power-supply" title="Permanent link">&para;</a></h2>
+<h2 id="using-the-power-supply">Using the Power supply<a class="headerlink" href="#using-the-power-supply" title="Permanent link">&para;</a></h2>
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <h2 id="remote-control">Remote control<a class="headerlink" href="#remote-control" title="Permanent link">&para;</a></h2>
-<p>The right panel can be used to move forward and make quick brakes. To reverse, double back (brake) reverses the gear. (IT is noticable from the beeping sound)</p>
+<p>The right panel can be used to move forward and make quick brakes. To reverse, double back (brake) and reverses the gear. (it is noticeable from the beeping sound)</p>
               
             </div>
           </div><footer>
