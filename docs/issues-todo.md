@@ -48,7 +48,7 @@
 - ❌ Fix carla streering value range
 - ❌ Make a command to stop wheel before killing the openpilot docker process
 - ❌ Fix hostname (dobby.local) translation inside docker (pass hostname as an environemnt variable)
-
+- ❌ Generic spec like: https://www.benderrobotics.com/breach.html
 Patches for fixing the issue with remote control
 ```
 void RcView::updateSpeedPulse() 

@@ -1,5 +1,5 @@
 # Interfaces and Sensors
-There are several sensor installed on Infotiv Autonomous Platform
+There are several sensors installed on Infotiv Autonomous Platform
 
 - Camera (Raspberry Pi Camera V2 Video Module )
 - Ultrasonic (Ultrasonic Sensor HC-SR04)
@@ -11,14 +11,14 @@ There are several sensor installed on Infotiv Autonomous Platform
 
 ## Robot Operating System (ROS)
 
-The user interfaces with ADAS through the terminal of a Linux-computer running ROS (Robot Operating System). A python-script on the computer calls ROS methods to publish and subscribe to ”topics”. On ADAS a CAN-gateway is running that converts ROS-topics into CAN-messages and vice versa. The computer connects to ADAS via wifi.
-By setting the data of a ROS-topic that corresponds to a CAN-message sent out by ADAS, the user can control other units that listens to the CAN-message. The CEM unit receives CAN-messages from ADAS requesting changes in Body Electronics (headlight, taillight, blinkers, horn, moodlight) behaviour. Depending on the state of the Power Mode, the changes are performed or denied.
+The user interfaces with ADAS through the terminal of a Linux computer running ROS (Robot Operating System). A python-script on the computer calls ROS methods to publish and subscribe to ”topics”. On ADAS a CAN gateway is running that converts ROS-topics into CAN-messages and vice versa. The computer connects to ADAS via wifi.
+By setting the data of a ROS topic that corresponds to a CAN message sent out by ADAS, the user can control other units that listen to the CAN message. The CEM unit receives CAN message from ADAS requesting changes in Body Electronics (headlight, taillight, blinkers, horn, mood light) behavior. Depending on the state of the Power Mode, the changes are performed or denied.
 
 
 ![System overview!](assets/images/rosgw.png " System overview")
 
-Requests to change the Power Mode can come from ADAS, or from a physical interface with buttons and a screen on the Gokart. This ECU, named DIM, sends CAN-messages requesting Power Mode changes, and receives CAN-messages from CEM with the updated Power Mode State. The screen shows the updated Power Mode State.
-The user can also subscribe to topics corresponding to CAN-messages received on ADAS. Part of the Body Electronics Intern Package is the Sonar Sensors Module (SSM) which is hosting six Sonar sensors that put out distance data. SSM converts the data to CAN-messages, which are transmitted to the bus and received by ADAS. Using the python script or the rostopic echo method on the computer, the user can monitor the sonar distance data in real time.
+Requests to change the Power Mode can come from ADAS, or from a physical interface with buttons and a screen on the Gokart. This ECU, named DIM, sends CAN messages requesting Power Mode changes and receives CAN messages from CEM with the updated Power Mode State. The screen shows the updated Power Mode State.
+The user can also subscribe to topics corresponding to CAN messages received on ADAS. Part of the Body Electronics Intern Package is the Sonar Sensors Module (SSM) which is hosting six Sonar sensors that put out distance data. SSM converts the data to CAN messages, which are transmitted to the bus and received by ADAS. Using the python script or the rostopic echo method on the computer, the user can monitor the sonar distance data in real-time.
 
 
 Can publisher http://dobby.local:35991
@@ -398,7 +398,7 @@ done
 ```
 
 ## Wifi interface
-By default the jetson board is configued to connect to `Infolab2` wifi network. The credential for the network is available in 
+By default, the jetson board is configured to connect to `Infolab2` wifi network. The credential for the network is available in 
 `/protectedDocuments/Credential.txt` **([Protected document](contact.md))**
 
 an IP in the range of 192.168.150.X is usually assigned to the client.
@@ -416,7 +416,7 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 ```
 
 ## Remote Control
-It is possible to control the GoKart using Remote Control system.
+It is possible to control the GoKart using the Remote Control system.
 
 Spektrum DX6e 6CH System w/ AR610
 

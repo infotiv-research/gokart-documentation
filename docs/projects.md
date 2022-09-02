@@ -9,7 +9,7 @@ Requirements:
 Customers:
 
  * Interns and Thesis work
- * Resaerch Projects
+ * Research Projects
  * Educational platform for External customer
 
 Please contact us if you are interested to work on any of these projects:
@@ -18,7 +18,7 @@ Please contact us if you are interested to work on any of these projects:
 
 - Upgrading the ECUs (Nvidia Jetson)
 - Simplification and Modularization of electrical body
-- Documnetaion and Test design
+- Documentation and Test design
 
 ## Verification and Validation
 
@@ -28,16 +28,16 @@ Please contact us if you are interested to work on any of these projects:
 
 ## Autonomous Platform Machine Learning Module
 
-Using available sensors extend the functinality of openpilot for:
+Using available sensors extends the functionality of openpilot for:
 
 - Driver Awareness and Monitoring Systems (DMS)
 - ADAS
 - Traffic Sign Detection (Speed limit, ...)
-- Pedestrain Detection
+- Pedestrian Detection
 
-There are improvements that needs to be done to finalize this project:
+Some improvements need to be done to finalize this project:
 Running OpenPilot on Jetson board (rather than an external laptop)
-Receving camera image frames through ROS (rather than via USB camera)
+Receiving camera image frames through ROS (rather than via USB camera)
 
 ## Autonomous Platform Infotainment Dashboard
 
@@ -48,6 +48,6 @@ Receving camera image frames through ROS (rather than via USB camera)
 
 - Remote Update (Microcontroller and other ECUs)
 - Transmission of Sensor Data (Camera, Lidar, ...)
-- Real time remote control
+- Real-time remote control
 
 

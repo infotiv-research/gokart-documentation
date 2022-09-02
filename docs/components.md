@@ -71,7 +71,7 @@ This module combines the MCP2515 CAN controller with the TJA1050 CAN transceiver
 
 
 ## HC-SR04 sonar sensor
-This sensor uses ultrasonic sound to measure distance to objects in it’s way. It’s working range is specified to between 20 to 4000 mm. It’s simple to set up but has a drawback in it’s quite narrow field of vision. To compensate for this we use six sensors on the Gokart.
+This sensor uses ultrasonic sound to measure the distance to objects in its way. Its working range is specified to be between 20 to 4000 mm. It’s simple to set up but has a drawback in its quite narrow field of vision. To compensate for this we use six sensors on the Gokart.
 
 ## EMG49 - Gear motor with encoder
 
@@ -81,7 +81,7 @@ The 3D model files can be found in `protectedDocuments/2020 - Infotiv Autonomous
 
 ## Battery and Battery Monitoring System
 
-To power the Body Electronics circuit require a battery of type Lipo 5000mAh 5S 25C Lipo Pack w/XT90. A LM2596 buck converter is used to step down the voltage from the battery to 12V powering the circuit
+To power, the Body Electronics circuit requires a battery of type Lipo 5000mAh 5S 25C Lipo Pack w/XT90. A LM2596 buck converter is used to step down the voltage from the battery to 12V powering the circuit
 The ECUs are powered by another Lipo battery with another buck converter that steps down to 5V.
 
 - HV – battery
