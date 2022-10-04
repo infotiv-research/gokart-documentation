@@ -1,15 +1,16 @@
 ### Issue List
 
+- ❌ Wifi only connects to INFOTIV internal wifi AP
 - ✅ Left & Right wheels are not synced: Possible Solution: Using the backup GoKart may possibly solve this.
 - ✅ Not possible to turn the wheel to the Left: Found a working solution in the repository
 - ✅ CAN message cannot be used to control the wheel/speed: Replaying the CAN can move the steering wheel.
 - ❌ System beeping for no reason with Red flashing light
 
-    1- Possible Solution: Use remote control (or ROS) to do propulsion operation (steering & speeed) and it changes the beeping patter and light color to orange
+    1- Possible Solution: Use remote control (or ROS) to do propulsion operation (steering & speeed) and it changes the beeping patern and light color to orange
 
     2- Possible Solution: internal gyro notices that the device is tilted?
 
-- ❌ The NVIDIA Jetson TX2 Developer Kit comes with 19v & 4.7A (90W max) power supply. However the external power & possible the battries cannot provide enough power and causes the Jetson to shutdown when wheel/steerin are engaged. 
+- ❌ The NVIDIA Jetson TX2 Developer Kit comes with 19v & 4.7A (90W max) power supply. However the external power & possible the battries cannot provide enough power and causes the Jetson to shutdown when wheel and steering are engaged. 
 - ✅ Kill switch: Fixed in the code.
 - ❌ Extra power supply & battery 
 - ❌ Segway supports external batteries (BMS need to be studied throughly)
@@ -24,7 +25,7 @@
 
 	2- ✅ Webpage
 
-- ❌ Thesis project to upgrade part, documentation, CI
+- ✅ Thesis project to upgrade part, documentation, CI and machine learning
 - ❌ pull request recent changes on VCU
 - ❌ Disable and enable RC in VCU
 - ❌ Find other areas for testing (preferebly with electricity and road line)
@@ -44,11 +45,13 @@
 - ❌ 3D print module for body electronics module
 - ✅  Kill switch or RC
 - ❌ Implement missing ROS APIs
-- ❌ reenable RC sttering, not sending neutral steering but just L&R  (see throttle for inspiration)
+- ❌ reenable RC steering, not sending neutral steering but just L&R  (see throttle for inspiration)
 - ❌ Fix carla streering value range
 - ❌ Make a command to stop wheel before killing the openpilot docker process
 - ❌ Fix hostname (dobby.local) translation inside docker (pass hostname as an environemnt variable)
 - ❌ Generic spec like: https://www.benderrobotics.com/breach.html
+
+
 Patches for fixing the issue with remote control
 ```
 void RcView::updateSpeedPulse() 
@@ -122,4 +125,26 @@ src/views/RcView.h
 -  static const int maxTurnPulse_ = 1930000;
 +  static const int minTurnPulse_ = 1050000;
 +  static const int maxTurnPulse_ = 1850000;
+```
+To check `GoKartController.cpp`:
+
+```
+/**
+ * Sets the vehicle speed. 
+ * 
+ * Motor want analog signals between 0,8v and 4,2v
+ * 
+ * Output pwm-signal between 0,24(4,2v analog) and 1(0,8v analog)(voltage inverted because of low pass filter) on pin A1
+ *
+ * @param speed_req Value between 0 and 1
+ */
+void GokartController::setSpeed(float speedReq)
+{
+    float speedPulse = linearConversion(speedReq, 0, 1, 1, 0.24); //speed_req * (0.24 - 1) + 1;
+    TIM_pulse.set_pwm_duty(2, speedPulse); 
+    TIM_pulse.set_pwm_duty(3, 0.75);
+    
+    gokartModel_->setWheelTorque(speedPulse);
+
+}
 ```

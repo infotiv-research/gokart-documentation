@@ -23,7 +23,7 @@ nav:
         - Software Repositories: software.md        
     - Usage Manual:
         - Start the GoKart: start.md
-        - Common Issues: issues-todo.md
+        - Known Issues: issues-todo.md
         - For Developers: dev.md
     - About:
         - Thesis Projects: projects.md
