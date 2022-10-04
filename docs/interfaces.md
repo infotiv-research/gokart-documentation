@@ -397,23 +397,7 @@ done
 
 ```
 
-## Wifi interface
-By default, the jetson board is configured to connect to `Infolab2` wifi network. The credential for the network is available in 
-`/protectedDocuments/Credential.txt` **([Protected document](contact.md))**
 
-an IP in the range of 192.168.150.X is usually assigned to the client.
-```
-nmcli c s Infolab2 
-ifconfig
-wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.150.120  netmask 255.255.255.0  broadcast 192.168.150.255
-        inet6 fe80::5b07:dc97:a15c:2dd2  prefixlen 64  scopeid 0x20<link>
-        ether 00:04:4b:f8:0e:d9  txqueuelen 1000  (Ethernet)
-        RX packets 2545  bytes 526525 (526.5 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 2416  bytes 536254 (536.2 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-```
 
 ## Remote Control
 It is possible to control the GoKart using the Remote Control system.
@@ -428,7 +412,6 @@ TODO: Picture
 
 ![Sabertooth 2x12!](assets/images/sabertooth2x12.png " Sabertooth 2x12")
 
-## Ethernet & Wifi
 
 
 
