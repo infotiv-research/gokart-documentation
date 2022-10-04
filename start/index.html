@@ -72,7 +72,7 @@
     <ul class="current">
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../issues-todo/">Common Issues</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../issues-todo/">Known Issues</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../dev/">For Developers</a>
                   </li>
@@ -127,6 +127,36 @@
 <pre><code class="language-bash">ssh -X gokart1@dobby.local
 ECDSA key fingerprint is SHA256:GkO/qyuwj+tCfwaZArQbMS8XsPUA4gfbMJdeTnqG1n4.
 </code></pre>
+<h2 id="wifi-interface">Wifi interface<a class="headerlink" href="#wifi-interface" title="Permanent link">&para;</a></h2>
+<p>By default, the jetson board is configured to first connect to <code>TP-LINK_POCKET_3020_BCA5FA</code> and then <code>Infolab2</code> wifi network. </p>
+<p>The credential for the network is available on the device (default password) and in 
+<code>/protectedDocuments/Credential.txt</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
+<p>an IP in the range of 192.168.150.X is usually assigned to the client in <code>Infolab2</code> wifi network.</p>
+<p>an IP in the range of 192.168.0.X is usually assigned to the client (192.168.0.00 for the laptop) in <code>TP-LINK_POCKET_3020_BCA5FA</code> wifi network.
+p</p>
+<pre><code>nmcli c s Infolab2 
+ifconfig
+wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 192.168.150.120  netmask 255.255.255.0  broadcast 192.168.150.255
+        inet6 fe80::5b07:dc97:a15c:2dd2  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 00:04:4b:f8:0e:d9  txqueuelen 1000  (Ethernet)
+        RX packets 2545  bytes 526525 (526.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2416  bytes 536254 (536.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+TP-LINK_POCKET_3020_BCA5FA
+wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 192.168.0.200  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::9d56:f87a:2b29:8d97  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 00:04:4b:f8:0e:d9  txqueuelen 1000  (Ethernet)
+        RX packets 9008  bytes 646052 (646.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9117  bytes 741776 (741.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+</code></pre>
 <h2 id="access-to-the-camera-remotely">Access to the camera remotely<a class="headerlink" href="#access-to-the-camera-remotely" title="Permanent link">&para;</a></h2>
 <p>After updating the configuration file <code>rtsp-simple-server.yml</code> as below</p>
 <pre><code class="language-txt">paths:
@@ -150,7 +180,7 @@ ECDSA key fingerprint is SHA256:GkO/qyuwj+tCfwaZArQbMS8XsPUA4gfbMJdeTnqG1n4.
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../software/" class="btn btn-neutral float-left" title="Software Repositories"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../issues-todo/" class="btn btn-neutral float-right" title="Common Issues">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../issues-todo/" class="btn btn-neutral float-right" title="Known Issues">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>

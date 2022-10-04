@@ -101,11 +101,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#wifi-interface">Wifi interface</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#remote-control">Remote Control</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#ethernet-wifi">Ethernet &amp; Wifi</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#sensor-images">Sensor images</a>
         <ul>
@@ -132,7 +128,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../start/">Start the GoKart</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../issues-todo/">Common Issues</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../issues-todo/">Known Issues</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../dev/">For Developers</a>
                   </li>
@@ -863,21 +859,6 @@ eval &quot;$command&quot;
 done
 
 </code></pre>
-<h2 id="wifi-interface">Wifi interface<a class="headerlink" href="#wifi-interface" title="Permanent link">&para;</a></h2>
-<p>By default, the jetson board is configured to connect to <code>Infolab2</code> wifi network. The credential for the network is available in 
-<code>/protectedDocuments/Credential.txt</code> <strong>(<a href="../contact/">Protected document</a>)</strong></p>
-<p>an IP in the range of 192.168.150.X is usually assigned to the client.</p>
-<pre><code>nmcli c s Infolab2 
-ifconfig
-wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
-        inet 192.168.150.120  netmask 255.255.255.0  broadcast 192.168.150.255
-        inet6 fe80::5b07:dc97:a15c:2dd2  prefixlen 64  scopeid 0x20&lt;link&gt;
-        ether 00:04:4b:f8:0e:d9  txqueuelen 1000  (Ethernet)
-        RX packets 2545  bytes 526525 (526.5 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 2416  bytes 536254 (536.2 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-</code></pre>
 <h2 id="remote-control">Remote Control<a class="headerlink" href="#remote-control" title="Permanent link">&para;</a></h2>
 <p>It is possible to control the GoKart using the Remote Control system.</p>
 <p>Spektrum DX6e 6CH System w/ AR610</p>
@@ -885,7 +866,6 @@ wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
 <p>TODO: Picture 
 <a href="https://www.dimensionengineering.com/datasheets/Sabertooth2x12.pdf">Sabertooth dual 12A motor driver for R/C</a></p>
 <p><img alt="Sabertooth 2x12!" src="../assets/images/sabertooth2x12.png" title="Sabertooth 2x12" /></p>
-<h2 id="ethernet-wifi">Ethernet &amp; Wifi<a class="headerlink" href="#ethernet-wifi" title="Permanent link">&para;</a></h2>
 <h2 id="sensor-images">Sensor images<a class="headerlink" href="#sensor-images" title="Permanent link">&para;</a></h2>
 <h4 id="camera-raspberry-pi-camera-v2-video-module">Camera (Raspberry Pi Camera V2 Video Module )<a class="headerlink" href="#camera-raspberry-pi-camera-v2-video-module" title="Permanent link">&para;</a></h4>
 <pre><code class="language-bash">sudo systemctl restart roscamera.service 
