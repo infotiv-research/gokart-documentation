@@ -1,12 +1,12 @@
 ### Issue List
 
-- ❌ Wifi only connects to INFOTIV internal wifi AP
+- ✅ Wifi only connects to INFOTIV internal wifi AP (TPLINK access point)
 - ✅ Left & Right wheels are not synced: Possible Solution: Using the backup GoKart may possibly solve this.
 - ✅ Not possible to turn the wheel to the Left: Found a working solution in the repository
 - ✅ CAN message cannot be used to control the wheel/speed: Replaying the CAN can move the steering wheel.
 - ❌ System beeping for no reason with Red flashing light
 
-    1- Possible Solution: Use remote control (or ROS) to do propulsion operation (steering & speeed) and it changes the beeping patern and light color to orange
+    1- Possible Solution: Make it less annoying by sending a speed ROS command or use remote control to do propulsion operation (steering & speeed) and it changes the beeping patern and light color to orange
 
     2- Possible Solution: internal gyro notices that the device is tilted?
 
@@ -18,11 +18,13 @@
 - ❌ OpenPilot 
 
 	1- Delay
+	
+	2- Speed is not controlled by OpenPilot yet
 
 - ✅ Documentation
 
 	1- ✅ PDF
-
+	
 	2- ✅ Webpage
 
 - ✅ Thesis project to upgrade part, documentation, CI and machine learning
@@ -111,6 +113,7 @@ The left steering is not implemented correctly or NOT at all
 ```
 
 2. last commit on gokart/Gokart_VCU
+
 ```
 src/controllers/GokartController.cpp  
 
