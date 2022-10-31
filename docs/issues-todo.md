@@ -10,9 +10,9 @@
 
     2- Possible Solution: internal gyro notices that the device is tilted?
 
-- ❌ The NVIDIA Jetson TX2 Developer Kit comes with 19v & 4.7A (90W max) power supply. However the external power & possible the battries cannot provide enough power and causes the Jetson to shutdown when wheel and steering are engaged. 
+- ✅ The NVIDIA Jetson TX2 Developer Kit comes with 19v & 4.7A (90W max) power supply. However the external power & possible the battries cannot provide enough power and causes the Jetson to shutdown when wheel and steering are engaged : biltema battery should be enough
 - ✅ Kill switch: Fixed in the code.
-- ❌ Extra power supply & battery 
+- ✅ Extra power supply & battery : biltema battery should be enough
 - ❌ Segway supports external batteries (BMS need to be studied throughly)
 - ✅ OpenPilot POC
 - ❌ OpenPilot 
