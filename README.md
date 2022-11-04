@@ -11,17 +11,18 @@ mkdocs gh-deploy  -f web-mkdocs.yml
 git clone https://github.com/ebadi/mkdocs-with-pdf
 cd mkdocs-with-pdf
 git checkout docker-fix
-cd mkdocs-with-pdf/docker/mkdocs-with-pdf
-mkdir ./docs-src/
+
 export GOKARTDOC=/home/wave/GoKart/gokart-documentation
 export GOKARTDOC=/home/hamid/repositories/gokart-documentation/
 
+cd docker/mkdocs-with-pdf
+mkdir ./docs-src/
 sudo mount --bind   $GOKARTDOC  ./docs-src/
-cd docker/mkdocs-with-pdf/
 docker-compose build
 docker-compose run debian build
 ```
 
+Output:
 
 
 ```
@@ -66,8 +67,6 @@ INFO     -  Converting 14 articles to PDF took 6.0s
 INFO     -  Documentation built in 7.17 seconds
 
 ```
-- [Output PDF](infotiv-gokart.pdf)
-
 
 
 
