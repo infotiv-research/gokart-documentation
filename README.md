@@ -9,17 +9,17 @@ mkdocs gh-deploy  -f web-mkdocs.yml
 
 ```
 git clone https://github.com/ebadi/mkdocs-with-pdf
+cd mkdocs-with-pdf
 git checkout docker-fix
 cd mkdocs-with-pdf/docker/mkdocs-with-pdf
 mkdir ./docs-src/
-sudo mount --bind  DOCUMENT_DIRECTORY_with_mkdocs.yml ./docs-src/
-
-e.g
 export GOKARTDOC=/home/wave/GoKart/gokart-documentation
-sudo mount --bind  $GOKARTDOC ./docs-src/
+export GOKARTDOC=/home/hamid/repositories/gokart-documentation/
+
+sudo mount --bind   $GOKARTDOC  ./docs-src/
+cd docker/mkdocs-with-pdf/
 docker-compose build
 docker-compose run debian build
-cp 
 ```
 
 

@@ -71,8 +71,7 @@ vlc -vvv --network-caching 200 rtsp://192.168.150.120:8554/cam
 
 ## Power supply 
 Inside the lab, for safety reasons related to charging batteries, it is recommended to power the system by plugging the appliance into an outlet.
-S8VK-G06012 power supply with XT60 connector provides DC 12V 4.5A to power both VCU and the steering motor. 
-GST90A19-NVDA provides 19V 4.7A to power Nvidia Jetson board.
+S8VK-G06012 power supply with XT60 connector provides DC 12V 4.5A to power both VCU and the steering motor, *HOWEVER* when the wheel starts moving the jetson does not recieve enough power and restarts. So please use GST90A19-NVDA which separately provides 19V 4.7A to power Nvidia Jetson board.
 
 ![Power supply !](assets/images/power.jpg "Power supply ")
 
@@ -107,9 +106,11 @@ The right panel can be used to move forward and make quick brakes. To reverse, d
 - mouse, keyboard (dongle), monitor
 - ST-LINK/V2 and extra STM32F103C8T6
 - Remote control
-- Battery and charger
+- Batteries
+- Extra segway
+- USB hub
 
-The wheel should moves back-and-forth 3 times
+The wheel should moves 3 times in different stage of startup:
 
 - When the VCU boots (issue? make sure that VCU is powered directly and not via ST-LINK/V2) 
 - When Jetson bootsup
